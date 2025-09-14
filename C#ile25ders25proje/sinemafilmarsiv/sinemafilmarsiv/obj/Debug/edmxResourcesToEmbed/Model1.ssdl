@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FilmArsivimModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'FilmArsivim.dbo.TBLFILMLER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBLFILMLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="varchar" MaxLength="50" />
+    <Property Name="KATEGORI" Type="varchar" MaxLength="50" />
+    <Property Name="LINK" Type="varchar" MaxLength="100" />
+    <Property Name="DURUM" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="FilmArsivimModelStoreContainer">
+    <EntitySet Name="TBLFILMLER" EntityType="Self.TBLFILMLER" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TBLFILMLER].[ID] AS [ID], 
+[TBLFILMLER].[AD] AS [AD], 
+[TBLFILMLER].[KATEGORI] AS [KATEGORI], 
+[TBLFILMLER].[LINK] AS [LINK], 
+[TBLFILMLER].[DURUM] AS [DURUM]
+FROM [dbo].[TBLFILMLER] AS [TBLFILMLER]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

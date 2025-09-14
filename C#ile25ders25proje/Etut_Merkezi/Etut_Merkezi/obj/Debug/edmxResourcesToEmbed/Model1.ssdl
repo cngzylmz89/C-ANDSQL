@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EtutTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TBLBRANS">
+    <Key>
+      <PropertyRef Name="BRANSID" />
+    </Key>
+    <Property Name="BRANSID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BRANSAD" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TBLETUT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DERSID" Type="tinyint" />
+    <Property Name="OGRETMENID" Type="tinyint" />
+    <Property Name="OGRENCIID" Type="smallint" />
+    <Property Name="TARIH" Type="varchar" MaxLength="10" />
+    <Property Name="SAAT" Type="char" MaxLength="5" />
+    <Property Name="DURUM" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBLOGRENCI">
+    <Key>
+      <PropertyRef Name="OGRID" />
+    </Key>
+    <Property Name="OGRID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OGRAD" Type="varchar" MaxLength="20" />
+    <Property Name="OGRSOYAD" Type="varchar" MaxLength="20" />
+    <Property Name="FOTOGRAF" Type="varchar" MaxLength="100" />
+    <Property Name="SINIF" Type="char" MaxLength="15" />
+    <Property Name="TELEFON" Type="varchar" MaxLength="50" />
+    <Property Name="MAIL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLOGRETMEN">
+    <Key>
+      <PropertyRef Name="OGRTID" />
+    </Key>
+    <Property Name="OGRTID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="varchar" MaxLength="20" />
+    <Property Name="SOYAD" Type="varchar" MaxLength="20" />
+    <Property Name="BRANS" Type="tinyint" />
+  </EntityType>
+  <Association Name="FK_TBLETUT_TBLBRANS">
+    <End Role="TBLBRANS" Type="Self.TBLBRANS" Multiplicity="0..1" />
+    <End Role="TBLETUT" Type="Self.TBLETUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLBRANS">
+        <PropertyRef Name="BRANSID" />
+      </Principal>
+      <Dependent Role="TBLETUT">
+        <PropertyRef Name="DERSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLETUT_TBLOGRENCI">
+    <End Role="TBLOGRENCI" Type="Self.TBLOGRENCI" Multiplicity="0..1" />
+    <End Role="TBLETUT" Type="Self.TBLETUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLOGRENCI">
+        <PropertyRef Name="OGRID" />
+      </Principal>
+      <Dependent Role="TBLETUT">
+        <PropertyRef Name="OGRENCIID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLETUT_TBLOGRETMEN">
+    <End Role="TBLOGRETMEN" Type="Self.TBLOGRETMEN" Multiplicity="0..1" />
+    <End Role="TBLETUT" Type="Self.TBLETUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLOGRETMEN">
+        <PropertyRef Name="OGRTID" />
+      </Principal>
+      <Dependent Role="TBLETUT">
+        <PropertyRef Name="OGRETMENID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLOGRETMEN_TBLBRANS">
+    <End Role="TBLBRANS" Type="Self.TBLBRANS" Multiplicity="0..1" />
+    <End Role="TBLOGRETMEN" Type="Self.TBLOGRETMEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLBRANS">
+        <PropertyRef Name="BRANSID" />
+      </Principal>
+      <Dependent Role="TBLOGRETMEN">
+        <PropertyRef Name="BRANS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="EtutTestModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLBRANS" EntityType="Self.TBLBRANS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLETUT" EntityType="Self.TBLETUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLOGRENCI" EntityType="Self.TBLOGRENCI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLOGRETMEN" EntityType="Self.TBLOGRETMEN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLETUT_TBLBRANS" Association="Self.FK_TBLETUT_TBLBRANS">
+      <End Role="TBLBRANS" EntitySet="TBLBRANS" />
+      <End Role="TBLETUT" EntitySet="TBLETUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLETUT_TBLOGRENCI" Association="Self.FK_TBLETUT_TBLOGRENCI">
+      <End Role="TBLOGRENCI" EntitySet="TBLOGRENCI" />
+      <End Role="TBLETUT" EntitySet="TBLETUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLETUT_TBLOGRETMEN" Association="Self.FK_TBLETUT_TBLOGRETMEN">
+      <End Role="TBLOGRETMEN" EntitySet="TBLOGRETMEN" />
+      <End Role="TBLETUT" EntitySet="TBLETUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLOGRETMEN_TBLBRANS" Association="Self.FK_TBLOGRETMEN_TBLBRANS">
+      <End Role="TBLBRANS" EntitySet="TBLBRANS" />
+      <End Role="TBLOGRETMEN" EntitySet="TBLOGRETMEN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

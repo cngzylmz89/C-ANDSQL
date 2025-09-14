@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BANKAMATIKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBLHAREKET">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GONDEREN" Type="Int32" />
+    <Property Name="ALICI" Type="Int32" />
+    <Property Name="TUTAR" Type="Decimal" Precision="18" Scale="3" />
+    <NavigationProperty Name="TBLKISILER" Relationship="Self.FK_TBLHAREKET_TBLKISILER" FromRole="TBLHAREKET" ToRole="TBLKISILER" />
+    <NavigationProperty Name="TBLKISILER1" Relationship="Self.FK_TBLHAREKET_TBLKISILER1" FromRole="TBLHAREKET" ToRole="TBLKISILER" />
+  </EntityType>
+  <EntityType Name="TBLHESAP">
+    <Key>
+      <PropertyRef Name="HESAPNO" />
+    </Key>
+    <Property Name="HESAPNO" Type="Int32" Nullable="false" />
+    <Property Name="BAKIYE" Type="Decimal" Precision="18" Scale="3" />
+    <NavigationProperty Name="TBLKISILER" Relationship="Self.FK_TBLHESAP_TBLKISILER" FromRole="TBLHESAP" ToRole="TBLKISILER" />
+  </EntityType>
+  <EntityType Name="TBLKISILER">
+    <Key>
+      <PropertyRef Name="HESAPNO" />
+    </Key>
+    <Property Name="HESAPNO" Type="Int32" Nullable="false" />
+    <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SOYAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="TELEFON" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SIFRE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLHAREKET" Relationship="Self.FK_TBLHAREKET_TBLKISILER" FromRole="TBLKISILER" ToRole="TBLHAREKET" />
+    <NavigationProperty Name="TBLHAREKET1" Relationship="Self.FK_TBLHAREKET_TBLKISILER1" FromRole="TBLKISILER" ToRole="TBLHAREKET" />
+    <NavigationProperty Name="TBLHESAP" Relationship="Self.FK_TBLHESAP_TBLKISILER" FromRole="TBLKISILER" ToRole="TBLHESAP" />
+  </EntityType>
+  <Association Name="FK_TBLHAREKET_TBLKISILER">
+    <End Role="TBLKISILER" Type="Self.TBLKISILER" Multiplicity="0..1" />
+    <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKISILER">
+        <PropertyRef Name="HESAPNO" />
+      </Principal>
+      <Dependent Role="TBLHAREKET">
+        <PropertyRef Name="GONDEREN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLHAREKET_TBLKISILER1">
+    <End Role="TBLKISILER" Type="Self.TBLKISILER" Multiplicity="0..1" />
+    <End Role="TBLHAREKET" Type="Self.TBLHAREKET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKISILER">
+        <PropertyRef Name="HESAPNO" />
+      </Principal>
+      <Dependent Role="TBLHAREKET">
+        <PropertyRef Name="ALICI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLHESAP_TBLKISILER">
+    <End Role="TBLKISILER" Type="Self.TBLKISILER" Multiplicity="1" />
+    <End Role="TBLHESAP" Type="Self.TBLHESAP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKISILER">
+        <PropertyRef Name="HESAPNO" />
+      </Principal>
+      <Dependent Role="TBLHESAP">
+        <PropertyRef Name="HESAPNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BANKAMATIKEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TBLHAREKET" EntityType="Self.TBLHAREKET" />
+    <EntitySet Name="TBLHESAP" EntityType="Self.TBLHESAP" />
+    <EntitySet Name="TBLKISILER" EntityType="Self.TBLKISILER" />
+    <AssociationSet Name="FK_TBLHAREKET_TBLKISILER" Association="Self.FK_TBLHAREKET_TBLKISILER">
+      <End Role="TBLKISILER" EntitySet="TBLKISILER" />
+      <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLHAREKET_TBLKISILER1" Association="Self.FK_TBLHAREKET_TBLKISILER1">
+      <End Role="TBLKISILER" EntitySet="TBLKISILER" />
+      <End Role="TBLHAREKET" EntitySet="TBLHAREKET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLHESAP_TBLKISILER" Association="Self.FK_TBLHESAP_TBLKISILER">
+      <End Role="TBLKISILER" EntitySet="TBLKISILER" />
+      <End Role="TBLHESAP" EntitySet="TBLHESAP" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BANKAMATIKModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BANKAMATIKModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

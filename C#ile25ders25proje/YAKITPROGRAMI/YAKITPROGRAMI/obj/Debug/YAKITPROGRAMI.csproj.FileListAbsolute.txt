@@ -1,0 +1,11 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\bin\Debug\YAKITPROGRAMI.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\bin\Debug\YAKITPROGRAMI.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\bin\Debug\YAKITPROGRAMI.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\YAKITPROGRAMI\YAKITPROGRAMI\obj\Debug\YAKITPROGRAMI.exe.config

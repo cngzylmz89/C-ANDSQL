@@ -1,0 +1,13 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\bin\Debug\otobusbiletrezervasyonu.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\bin\Debug\otobusbiletrezervasyonu.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\bin\Debug\otobusbiletrezervasyonu.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbiletrezervasyonu.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbiletrezervasyonu.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbiletrezervasyonu.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbiletrezervasyonu.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbiletrezervasyonu.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbiletrezervasyonu.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbiletrezervasyonu.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\bin\Debug\EntityFramework.dll
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\bin\Debug\EntityFramework.xml
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\otobusbiletrezervasyonu\otobusbiletrezervasyonu\obj\Debug\otobusbi.8DB55495.Up2Date

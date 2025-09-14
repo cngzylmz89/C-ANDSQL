@@ -1,0 +1,13 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\bin\Debug\Veritabanisifreleme.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\bin\Debug\Veritabanisifreleme.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\bin\Debug\Veritabanisifreleme.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritabanisifreleme.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritabanisifreleme.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritabanisifreleme.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritabanisifreleme.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritabanisifreleme.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritabanisifreleme.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritabanisifreleme.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\bin\Debug\EntityFramework.dll
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\bin\Debug\EntityFramework.xml
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Veritabanisifreleme\Veritabanisifreleme\obj\Debug\Veritaba.08DC72F4.Up2Date

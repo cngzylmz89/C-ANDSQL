@@ -1,0 +1,13 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\bin\Debug\XmlDoviz_Uygulamasi.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\bin\Debug\XmlDoviz_Uygulamasi.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\bin\Debug\XmlDoviz_Uygulamasi.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz_Uygulamasi.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz_Uygulamasi.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz_Uygulamasi.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz_Uygulamasi.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz_Uygulamasi.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz_Uygulamasi.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz_Uygulamasi.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\bin\Debug\EntityFramework.dll
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\bin\Debug\EntityFramework.xml
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\XmlDoviz_Uygulamasi\XmlDoviz_Uygulamasi\obj\Debug\XmlDoviz.69F726D6.Up2Date

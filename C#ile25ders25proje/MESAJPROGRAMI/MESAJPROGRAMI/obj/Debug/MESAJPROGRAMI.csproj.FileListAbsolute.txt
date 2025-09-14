@@ -1,0 +1,11 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\bin\Debug\MESAJPROGRAMI.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\bin\Debug\MESAJPROGRAMI.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\bin\Debug\MESAJPROGRAMI.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\MESAJPROGRAMI\MESAJPROGRAMI\obj\Debug\MESAJPROGRAMI.Form2.resources

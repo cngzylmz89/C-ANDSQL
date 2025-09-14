@@ -1,0 +1,10 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\bin\Debug\sqlyedekalmakitaplik.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\bin\Debug\sqlyedekalmakitaplik.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\bin\Debug\sqlyedekalmakitaplik.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\obj\Debug\sqlyedekalmakitaplik.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\obj\Debug\sqlyedekalmakitaplik.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\obj\Debug\sqlyedekalmakitaplik.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\obj\Debug\sqlyedekalmakitaplik.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\obj\Debug\sqlyedekalmakitaplik.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\obj\Debug\sqlyedekalmakitaplik.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sqlyedekalmakitaplik\sqlyedekalmakitaplik\obj\Debug\sqlyedekalmakitaplik.pdb

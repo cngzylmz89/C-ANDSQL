@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSECIMPROJEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DBSECIMPROJE.dbo.TBLILCE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBLILCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ILCEAD" Type="varchar" MaxLength="20" />
+    <Property Name="APARTI" Type="smallint" />
+    <Property Name="BPARTI" Type="smallint" />
+    <Property Name="CPARTI" Type="smallint" />
+    <Property Name="DPARTI" Type="smallint" />
+    <Property Name="EPARTI" Type="smallint" />
+  </EntityType>
+  <EntityContainer Name="DBSECIMPROJEModelStoreContainer">
+    <EntitySet Name="TBLILCE" EntityType="Self.TBLILCE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TBLILCE].[ID] AS [ID], 
+[TBLILCE].[ILCEAD] AS [ILCEAD], 
+[TBLILCE].[APARTI] AS [APARTI], 
+[TBLILCE].[BPARTI] AS [BPARTI], 
+[TBLILCE].[CPARTI] AS [CPARTI], 
+[TBLILCE].[DPARTI] AS [DPARTI], 
+[TBLILCE].[EPARTI] AS [EPARTI]
+FROM [dbo].[TBLILCE] AS [TBLILCE]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

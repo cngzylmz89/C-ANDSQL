@@ -1,0 +1,11 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\bin\Debug\Resimuzerineyaziyaz.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\bin\Debug\Resimuzerineyaziyaz.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\bin\Debug\Resimuzerineyaziyaz.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Resimuzerineyaziyaz\Resimuzerineyaziyaz\obj\Debug\Resimuzerineyaziyaz.exe.config

@@ -1,0 +1,10 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\bin\Debug\ikiboyutlunesnelerhareket.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\bin\Debug\ikiboyutlunesnelerhareket.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\bin\Debug\ikiboyutlunesnelerhareket.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\obj\Debug\ikiboyutlunesnelerhareket.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\obj\Debug\ikiboyutlunesnelerhareket.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\obj\Debug\ikiboyutlunesnelerhareket.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\obj\Debug\ikiboyutlunesnelerhareket.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\obj\Debug\ikiboyutlunesnelerhareket.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\obj\Debug\ikiboyutlunesnelerhareket.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\ikiboyutlunesnelerhareket\ikiboyutlunesnelerhareket\obj\Debug\ikiboyutlunesnelerhareket.pdb

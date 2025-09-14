@@ -1,0 +1,11 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\bin\Debug\Kelimogrenaccesile.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\bin\Debug\Kelimogrenaccesile.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\bin\Debug\Kelimogrenaccesile.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.Form2.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Kelimogrenaccesile\Kelimogrenaccesile\obj\Debug\Kelimogrenaccesile.pdb

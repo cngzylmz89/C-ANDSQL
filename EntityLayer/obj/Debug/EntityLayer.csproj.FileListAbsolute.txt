@@ -1,0 +1,6 @@
+C:\Users\PC\Desktop\c#allproject\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\PC\Desktop\c#allproject\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\PC\Desktop\c#allproject\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\c#allproject\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\c#allproject\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\PC\Desktop\c#allproject\EntityLayer\obj\Debug\EntityLayer.pdb

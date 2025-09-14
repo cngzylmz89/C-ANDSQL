@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E93BFD6F-FE44-42B2-B88D-77A3921462DF}|XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi.csproj|c:\\users\\ceng\u0130z\\desktop\\c#allproject\\c#ile25ders25proje\\xmldoviz_uygulamasi\\xmldoviz_uygulamasi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E93BFD6F-FE44-42B2-B88D-77A3921462DF}|XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi.csproj|solutionrelative:xmldoviz_uygulamasi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93BFD6F-FE44-42B2-B88D-77A3921462DF}|XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\xmldoviz_uygulamasi\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{E93BFD6F-FE44-42B2-B88D-77A3921462DF}|XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi.csproj|solutionrelative:xmldoviz_uygulamasi\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E93BFD6F-FE44-42B2-B88D-77A3921462DF}|XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\xmldoviz_uygulamasi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E93BFD6F-FE44-42B2-B88D-77A3921462DF}|XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi.csproj|solutionrelative:xmldoviz_uygulamasi\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e78e0cf7-2e4e-48a7-bf7f-a94d9330a3be}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{80c411e8-fd5e-4b16-914b-0d9d84172cc1}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi\\Model1.edmx",
+              "RelativeDocumentMoniker": "XmlDoviz_Uygulamasi\\Model1.edmx",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "XmlDoviz_Uygulamasi\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-07-01T12:06:24.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi\\Form1.cs",
+              "RelativeDocumentMoniker": "XmlDoviz_Uygulamasi\\Form1.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi\\Form1.cs",
+              "RelativeToolTip": "XmlDoviz_Uygulamasi\\Form1.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAcwIgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T07:32:03.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi\\Form1.cs",
+              "RelativeDocumentMoniker": "XmlDoviz_Uygulamasi\\Form1.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\XmlDoviz_Uygulamasi\\XmlDoviz_Uygulamasi\\Form1.cs [Design]",
+              "RelativeToolTip": "XmlDoviz_Uygulamasi\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T14:25:21.4Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

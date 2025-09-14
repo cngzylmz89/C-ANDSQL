@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dovizkurModelStoreContainer" CdmEntityContainer="dovizkurEntities">
+    <EntitySetMapping Name="DOVIZKASA">
+      <EntityTypeMapping TypeName="dovizkurModel.DOVIZKASA">
+        <MappingFragment StoreEntitySet="DOVIZKASA">
+          <ScalarProperty Name="TL" ColumnName="TL" />
+          <ScalarProperty Name="ISLEMID" ColumnName="ISLEMID" />
+          <ScalarProperty Name="DOLAR" ColumnName="DOLAR" />
+          <ScalarProperty Name="EURO" ColumnName="EURO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|c:\\users\\ceng\u0130z\\desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekreterdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmsekreterdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|c:\\users\\ceng\u0130z\\desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekreterdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmsekreterdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|c:\\users\\ceng\u0130z\\desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorpaneli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmdoktorpaneli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorpaneli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmdoktorpaneli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastakayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmhastakayit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmdoktorgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\sqlbaglan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\sqlbaglan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastadetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmhastadetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekretergiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmsekretergiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekretergiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmsekretergiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastadetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmhastadetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmbrans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BD2BE1C8-F9E0-49CB-8EF8-1A9B44B731C2}|hastaneprojesi\\hastaneprojesi.csproj|solutionrelative:hastaneprojesi\\frmbrans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmsekreterdetay.cs",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekreterdetay.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmsekreterdetay.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekreterdetay.cs",
+              "RelativeToolTip": "hastaneprojesi\\frmsekreterdetay.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T12:42:53.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmsekreterdetay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekreterdetay.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmsekreterdetay.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekreterdetay.cs [Design]",
+              "RelativeToolTip": "hastaneprojesi\\frmsekreterdetay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T12:42:49.458Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmdoktorpaneli.cs",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorpaneli.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmdoktorpaneli.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorpaneli.cs",
+              "RelativeToolTip": "hastaneprojesi\\frmdoktorpaneli.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T12:22:08.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmdoktorpaneli.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorpaneli.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmdoktorpaneli.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorpaneli.cs [Design]",
+              "RelativeToolTip": "hastaneprojesi\\frmdoktorpaneli.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T12:22:02.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmhastakayit.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastakayit.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmhastakayit.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastakayit.cs [Design]",
+              "RelativeToolTip": "hastaneprojesi\\frmhastakayit.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T06:13:59.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmdoktorgiris.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorgiris.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmdoktorgiris.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmdoktorgiris.cs [Design]",
+              "RelativeToolTip": "hastaneprojesi\\frmdoktorgiris.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T06:13:35.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmsekretergiris.cs",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekretergiris.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmsekretergiris.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekretergiris.cs",
+              "RelativeToolTip": "hastaneprojesi\\frmsekretergiris.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T08:54:18.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmsekretergiris.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekretergiris.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmsekretergiris.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmsekretergiris.cs [Design]",
+              "RelativeToolTip": "hastaneprojesi\\frmsekretergiris.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T08:54:15.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "sqlbaglan.cs",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\sqlbaglan.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\sqlbaglan.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\sqlbaglan.cs",
+              "RelativeToolTip": "hastaneprojesi\\sqlbaglan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-18T08:53:46.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmhastadetay.cs",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastadetay.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmhastadetay.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastadetay.cs",
+              "RelativeToolTip": "hastaneprojesi\\frmhastadetay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:02:45.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmhastadetay.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastadetay.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmhastadetay.cs",
+              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmhastadetay.cs [Design]",
+              "RelativeToolTip": "hastaneprojesi\\frmhastadetay.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:02:43.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmbrans.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\hastaneprojesi\\hastaneprojesi\\frmbrans.cs",
+              "RelativeDocumentMoniker": "hastaneprojesi\\frmbrans.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\C#B\u00DCT\u00DCN PROJELER - Kopya\\hastaneprojesi\\hastaneprojesi\\frmbrans.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\PC\\Desktop\\C#B\u00DCT\u00DCN PROJELER - Kopya\\hastaneprojesi\\hastaneprojesi\\frmbrans.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:02:34.33Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

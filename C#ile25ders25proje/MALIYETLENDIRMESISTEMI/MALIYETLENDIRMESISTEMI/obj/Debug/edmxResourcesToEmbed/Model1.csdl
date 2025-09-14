@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TESTMALIYETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBLMALZEMELER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STOK" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FIYAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOTLAR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLURUNMALZEMEDETAYs" Relationship="Self.FK_TBLURUNMALZEMEDETAY_TBLMALZEMELER" FromRole="TBLMALZEMELER" ToRole="TBLURUNMALZEMEDETAY" />
+    <Property Name="MALZEMEADI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLURUNLER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MFIYAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SFIYAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="STOK" Type="Int16" />
+    <NavigationProperty Name="TBLURUNMALZEMEDETAY" Relationship="Self.FK_TBLURUNMALZEMEDETAY_TBLURUNLER" FromRole="TBLURUNLER" ToRole="TBLURUNMALZEMEDETAY" />
+    <NavigationProperty Name="TBLURUNSATIS" Relationship="Self.FK_TBLURUNSATIS_TBLURUNLER" FromRole="TBLURUNLER" ToRole="TBLURUNSATIS" />
+    <Property Name="URETIMTARIHI" Type="DateTime" Precision="0" />
+    <Property Name="SNTUKETIMTARIHI" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TBLURUNMALZEMEDETAY">
+    <Key>
+      <PropertyRef Name="URUNID" />
+    </Key>
+    <Property Name="URUNID" Type="Byte" Nullable="false" />
+    <Property Name="URUNMALZEME" Type="Int16" />
+    <Property Name="URUNMALMIKTAR" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="URUNMALFIYAT" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="TBLMALZEMELER" Relationship="Self.FK_TBLURUNMALZEMEDETAY_TBLMALZEMELER" FromRole="TBLURUNMALZEMEDETAY" ToRole="TBLMALZEMELER" />
+    <NavigationProperty Name="TBLURUNLER" Relationship="Self.FK_TBLURUNMALZEMEDETAY_TBLURUNLER" FromRole="TBLURUNMALZEMEDETAY" ToRole="TBLURUNLER" />
+    <Property Name="URUNADET" Type="Byte" />
+  </EntityType>
+  <EntityType Name="TBLURUNSATIS">
+    <Key>
+      <PropertyRef Name="SATISID" />
+    </Key>
+    <Property Name="SATISID" Type="Int32" Nullable="false" />
+    <Property Name="ALICIADSOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ALICITELEFON" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="ALICIADRES" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="URUNID" Type="Byte" />
+    <Property Name="URUNFIYAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="URUNADET" Type="Int16" />
+    <NavigationProperty Name="TBLURUNLER" Relationship="Self.FK_TBLURUNSATIS_TBLURUNLER" FromRole="TBLURUNSATIS" ToRole="TBLURUNLER" />
+  </EntityType>
+  <Association Name="FK_TBLURUNMALZEMEDETAY_TBLMALZEMELER">
+    <End Role="TBLMALZEMELER" Type="Self.TBLMALZEMELER" Multiplicity="0..1" />
+    <End Role="TBLURUNMALZEMEDETAY" Type="Self.TBLURUNMALZEMEDETAY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLMALZEMELER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLURUNMALZEMEDETAY">
+        <PropertyRef Name="URUNMALZEME" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLURUNMALZEMEDETAY_TBLURUNLER">
+    <End Role="TBLURUNLER" Type="Self.TBLURUNLER" Multiplicity="1" />
+    <End Role="TBLURUNMALZEMEDETAY" Type="Self.TBLURUNMALZEMEDETAY" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TBLURUNLER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLURUNMALZEMEDETAY">
+        <PropertyRef Name="URUNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLURUNSATIS_TBLURUNLER">
+    <End Role="TBLURUNLER" Type="Self.TBLURUNLER" Multiplicity="0..1" />
+    <End Role="TBLURUNSATIS" Type="TESTMALIYETModel.TBLURUNSATIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLURUNLER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLURUNSATIS">
+        <PropertyRef Name="URUNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TESTMALIYETEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TBLMALZEMELERs" EntityType="Self.TBLMALZEMELER" />
+    <EntitySet Name="TBLURUNLERs" EntityType="Self.TBLURUNLER" />
+    <EntitySet Name="TBLURUNMALZEMEDETAYs" EntityType="Self.TBLURUNMALZEMEDETAY" />
+    <EntitySet Name="TBLURUNSATIS" EntityType="TESTMALIYETModel.TBLURUNSATIS" />
+    <AssociationSet Name="FK_TBLURUNMALZEMEDETAY_TBLMALZEMELER" Association="Self.FK_TBLURUNMALZEMEDETAY_TBLMALZEMELER">
+      <End Role="TBLMALZEMELER" EntitySet="TBLMALZEMELERs" />
+      <End Role="TBLURUNMALZEMEDETAY" EntitySet="TBLURUNMALZEMEDETAYs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLURUNMALZEMEDETAY_TBLURUNLER" Association="Self.FK_TBLURUNMALZEMEDETAY_TBLURUNLER">
+      <End Role="TBLURUNLER" EntitySet="TBLURUNLERs" />
+      <End Role="TBLURUNMALZEMEDETAY" EntitySet="TBLURUNMALZEMEDETAYs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLURUNSATIS_TBLURUNLER" Association="Self.FK_TBLURUNSATIS_TBLURUNLER">
+      <End Role="TBLURUNLER" EntitySet="TBLURUNLERs" />
+      <End Role="TBLURUNSATIS" EntitySet="TBLURUNSATIS" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TESTMALIYETModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TESTMALIYETModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="URUNGETIR" IsComposable="true" ReturnType="Collection(TESTMALIYETModel.URUNGETIR_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int16" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="URUNGETIR_Result">
+    <Property Type="Byte" Name="URUNID" Nullable="false" />
+    <Property Type="String" Name="AD" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MALZEMEADI" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="URUNMALMIKTAR" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="URUNMALFIYAT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Byte" Name="URUNADET" Nullable="true" />
+  </ComplexType>
+</Schema>

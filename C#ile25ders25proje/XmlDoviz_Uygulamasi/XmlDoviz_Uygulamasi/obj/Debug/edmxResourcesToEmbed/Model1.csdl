@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dovizkurModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DOVIZKASA">
+    <Key>
+      <PropertyRef Name="ISLEMID" />
+    </Key>
+    <Property Name="ISLEMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DOLAR" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="EURO" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="TL" Type="Decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="dovizkurEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DOVIZKASA" EntityType="Self.DOVIZKASA" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,13 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\bin\Debug\Etut_Merkezi.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\bin\Debug\Etut_Merkezi.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\bin\Debug\Etut_Merkezi.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Merkezi.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Merkezi.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Merkezi.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Merkezi.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Merkezi.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Merkezi.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Merkezi.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\bin\Debug\EntityFramework.dll
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\bin\Debug\EntityFramework.xml
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Etut_Merkezi\Etut_Merkezi\obj\Debug\Etut_Mer.55A125C1.Up2Date

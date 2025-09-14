@@ -1,0 +1,14 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\bin\Debug\sinemafilmarsiv.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\bin\Debug\sinemafilmarsiv.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\bin\Debug\sinemafilmarsiv.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\bin\Debug\EntityFramework.dll
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\bin\Debug\EntityFramework.xml
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafi.5BFB5D14.Up2Date
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\sinemafilmarsiv\sinemafilmarsiv\obj\Debug\sinemafilmarsiv.tamekran.resources

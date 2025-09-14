@@ -1,0 +1,11 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\bin\Debug\Excellilekayit.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\bin\Debug\Excellilekayit.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\bin\Debug\Excellilekayit.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\Excellilekayit\Excellilekayit\obj\Debug\Excellilekayit.exe.config

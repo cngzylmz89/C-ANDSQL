@@ -1,0 +1,16 @@
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\bin\Debug\BANKAPROJESI.exe.config
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\bin\Debug\BANKAPROJESI.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\bin\Debug\BANKAPROJESI.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\bin\Debug\EntityFramework.dll
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\bin\Debug\EntityFramework.xml
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.csproj.AssemblyReference.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.Form1.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.Form2.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.Form3.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.Properties.Resources.resources
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.csproj.GenerateResource.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.csproj.CoreCompileInputs.cache
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPRO.EF4EF1DE.Up2Date
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.exe
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.pdb
+C:\Users\CENGİZ\Desktop\c#allproject\C#ile25ders25proje\BANKAPROJESI\BANKAPROJESI\obj\Debug\BANKAPROJESI.Form4.resources

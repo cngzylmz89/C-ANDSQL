@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSECIMPROJEModelStoreContainer" CdmEntityContainer="DBSECIMPROJEEntities">
+    <EntitySetMapping Name="TBLILCEs">
+      <EntityTypeMapping TypeName="DBSECIMPROJEModel.TBLILCE">
+        <MappingFragment StoreEntitySet="TBLILCE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ILCEAD" ColumnName="ILCEAD" />
+          <ScalarProperty Name="APARTI" ColumnName="APARTI" />
+          <ScalarProperty Name="BPARTI" ColumnName="BPARTI" />
+          <ScalarProperty Name="CPARTI" ColumnName="CPARTI" />
+          <ScalarProperty Name="DPARTI" ColumnName="DPARTI" />
+          <ScalarProperty Name="EPARTI" ColumnName="EPARTI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
