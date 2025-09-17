@@ -6,6 +6,7 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -54,6 +55,7 @@ namespace PERFORMANS
         }
         public int haftaal(DateTime dtPassed)
         {
+
             CultureInfo ciCurr = CultureInfo.CurrentCulture;
             int weekNum = ciCurr.Calendar.GetWeekOfYear(dtPassed, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
             return weekNum;
@@ -410,7 +412,7 @@ namespace PERFORMANS
 
             //dönemin birinci sinifi
             con.Open();
-            OleDbCommand komuttopsinifdus = new OleDbCommand("select TOP 1 SINIFAD, SUM(TOPLAMPUAN) FROM TBLNOTLAR INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLNOTLAR.SINIF   GROUP BY SINIFAD ORDER BY SUM(TOPLAMPUAN) DESC", con);
+            OleDbCommand komuttopsinifdus = new OleDbCommand("select TOP 1 SINIFAD, SUM(TOPLAMPUAN) FROM TBLNOTLAR INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLNOTLAR.SINIF   GROUP BY SINIFAD ORDER BY SUM(TOPLAMPUAN) ASC", con);
             OleDbDataReader komuttopsinifdusrd = komuttopsinifdus.ExecuteReader();
             while (komuttopsinifdusrd.Read())
             {

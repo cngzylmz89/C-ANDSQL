@@ -92,6 +92,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pckogrencifoto = new System.Windows.Forms.PictureBox();
+            this.btnsinifdersdonemnottable = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -271,7 +272,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lbltpl, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lbltoplam, 2, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 36);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -281,159 +282,176 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(782, 287);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(782, 293);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 208);
+            this.label8.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(3, 212);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 35);
+            this.label8.Size = new System.Drawing.Size(17, 19);
             this.label8.TabIndex = 14;
             this.label8.Text = "5";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 156);
+            this.label7.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(3, 159);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 35);
+            this.label7.Size = new System.Drawing.Size(17, 19);
             this.label7.TabIndex = 13;
             this.label7.Text = "4";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 104);
+            this.label6.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(3, 106);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 35);
+            this.label6.Size = new System.Drawing.Size(16, 19);
             this.label6.TabIndex = 12;
             this.label6.Text = "3";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 52);
+            this.label2.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(3, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 35);
+            this.label2.Size = new System.Drawing.Size(17, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "2";
             // 
             // lblbirpuan
             // 
             this.lblbirpuan.AutoSize = true;
+            this.lblbirpuan.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblbirpuan.Location = new System.Drawing.Point(700, 0);
             this.lblbirpuan.Name = "lblbirpuan";
-            this.lblbirpuan.Size = new System.Drawing.Size(68, 35);
+            this.lblbirpuan.Size = new System.Drawing.Size(39, 19);
             this.lblbirpuan.TabIndex = 5;
             this.lblbirpuan.Text = "BOŞ";
             // 
             // lblikipuan
             // 
             this.lblikipuan.AutoSize = true;
-            this.lblikipuan.Location = new System.Drawing.Point(700, 52);
+            this.lblikipuan.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblikipuan.Location = new System.Drawing.Point(700, 53);
             this.lblikipuan.Name = "lblikipuan";
-            this.lblikipuan.Size = new System.Drawing.Size(68, 35);
+            this.lblikipuan.Size = new System.Drawing.Size(39, 19);
             this.lblikipuan.TabIndex = 6;
             this.lblikipuan.Text = "BOŞ";
             // 
             // lblucpuan
             // 
             this.lblucpuan.AutoSize = true;
-            this.lblucpuan.Location = new System.Drawing.Point(700, 104);
+            this.lblucpuan.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblucpuan.Location = new System.Drawing.Point(700, 106);
             this.lblucpuan.Name = "lblucpuan";
-            this.lblucpuan.Size = new System.Drawing.Size(68, 35);
+            this.lblucpuan.Size = new System.Drawing.Size(39, 19);
             this.lblucpuan.TabIndex = 7;
             this.lblucpuan.Text = "BOŞ";
             // 
             // lbldortpuan
             // 
             this.lbldortpuan.AutoSize = true;
-            this.lbldortpuan.Location = new System.Drawing.Point(700, 156);
+            this.lbldortpuan.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbldortpuan.Location = new System.Drawing.Point(700, 159);
             this.lbldortpuan.Name = "lbldortpuan";
-            this.lbldortpuan.Size = new System.Drawing.Size(68, 35);
+            this.lbldortpuan.Size = new System.Drawing.Size(39, 19);
             this.lbldortpuan.TabIndex = 8;
             this.lbldortpuan.Text = "BOŞ";
             // 
             // lblbespuan
             // 
             this.lblbespuan.AutoSize = true;
-            this.lblbespuan.Location = new System.Drawing.Point(700, 208);
+            this.lblbespuan.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblbespuan.Location = new System.Drawing.Point(700, 212);
             this.lblbespuan.Name = "lblbespuan";
-            this.lblbespuan.Size = new System.Drawing.Size(68, 35);
+            this.lblbespuan.Size = new System.Drawing.Size(39, 19);
             this.lblbespuan.TabIndex = 9;
             this.lblbespuan.Text = "BOŞ";
             // 
             // lblolcutbır
             // 
             this.lblolcutbır.AutoSize = true;
+            this.lblolcutbır.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblolcutbır.Location = new System.Drawing.Point(63, 0);
             this.lblolcutbır.Name = "lblolcutbır";
-            this.lblolcutbır.Size = new System.Drawing.Size(68, 35);
+            this.lblolcutbır.Size = new System.Drawing.Size(39, 19);
             this.lblolcutbır.TabIndex = 0;
             this.lblolcutbır.Text = "BOŞ";
             // 
             // lblolcutiki
             // 
             this.lblolcutiki.AutoSize = true;
-            this.lblolcutiki.Location = new System.Drawing.Point(63, 52);
+            this.lblolcutiki.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblolcutiki.Location = new System.Drawing.Point(63, 53);
             this.lblolcutiki.Name = "lblolcutiki";
-            this.lblolcutiki.Size = new System.Drawing.Size(68, 35);
+            this.lblolcutiki.Size = new System.Drawing.Size(39, 19);
             this.lblolcutiki.TabIndex = 1;
             this.lblolcutiki.Text = "BOŞ";
             // 
             // lblolcutuc
             // 
             this.lblolcutuc.AutoSize = true;
-            this.lblolcutuc.Location = new System.Drawing.Point(63, 104);
+            this.lblolcutuc.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblolcutuc.Location = new System.Drawing.Point(63, 106);
             this.lblolcutuc.Name = "lblolcutuc";
-            this.lblolcutuc.Size = new System.Drawing.Size(68, 35);
+            this.lblolcutuc.Size = new System.Drawing.Size(39, 19);
             this.lblolcutuc.TabIndex = 2;
             this.lblolcutuc.Text = "BOŞ";
             // 
             // lblolcutdort
             // 
             this.lblolcutdort.AutoSize = true;
-            this.lblolcutdort.Location = new System.Drawing.Point(63, 156);
+            this.lblolcutdort.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblolcutdort.Location = new System.Drawing.Point(63, 159);
             this.lblolcutdort.Name = "lblolcutdort";
-            this.lblolcutdort.Size = new System.Drawing.Size(68, 35);
+            this.lblolcutdort.Size = new System.Drawing.Size(39, 19);
             this.lblolcutdort.TabIndex = 3;
             this.lblolcutdort.Text = "BOŞ";
             // 
             // lblolcutbes
             // 
             this.lblolcutbes.AutoSize = true;
-            this.lblolcutbes.Location = new System.Drawing.Point(63, 208);
+            this.lblolcutbes.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblolcutbes.Location = new System.Drawing.Point(63, 212);
             this.lblolcutbes.Name = "lblolcutbes";
-            this.lblolcutbes.Size = new System.Drawing.Size(68, 35);
+            this.lblolcutbes.Size = new System.Drawing.Size(39, 19);
             this.lblolcutbes.TabIndex = 4;
             this.lblolcutbes.Text = "BOŞ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 35);
+            this.label1.Size = new System.Drawing.Size(17, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "1";
             // 
             // lbltpl
             // 
             this.lbltpl.AutoSize = true;
-            this.lbltpl.Location = new System.Drawing.Point(63, 260);
+            this.lbltpl.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltpl.Location = new System.Drawing.Point(63, 265);
             this.lbltpl.Name = "lbltpl";
-            this.lbltpl.Size = new System.Drawing.Size(215, 27);
+            this.lbltpl.Size = new System.Drawing.Size(123, 19);
             this.lbltpl.TabIndex = 15;
             this.lbltpl.Text = "TOPLAM PUANI:";
             // 
             // lbltoplam
             // 
             this.lbltoplam.AutoSize = true;
-            this.lbltoplam.Location = new System.Drawing.Point(700, 260);
+            this.lbltoplam.Font = new System.Drawing.Font("Corbel", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltoplam.Location = new System.Drawing.Point(700, 265);
             this.lbltoplam.Name = "lbltoplam";
-            this.lbltoplam.Size = new System.Drawing.Size(68, 27);
+            this.lbltoplam.Size = new System.Drawing.Size(39, 19);
             this.lbltoplam.TabIndex = 16;
             this.lbltoplam.Text = "BOŞ";
             // 
@@ -441,6 +459,7 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btnsinifdersdonemnottable);
             this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Controls.Add(this.button11);
             this.groupBox3.Controls.Add(this.button9);
@@ -459,10 +478,10 @@
             this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button10.Font = new System.Drawing.Font("Corbel", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button10.Location = new System.Drawing.Point(6, 207);
+            this.button10.Font = new System.Drawing.Font("Corbel", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button10.Location = new System.Drawing.Point(6, 156);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(250, 45);
+            this.button10.Size = new System.Drawing.Size(250, 26);
             this.button10.TabIndex = 6;
             this.button10.Text = "SINIFIN HAFTALIK TOPLAM PUANI";
             this.button10.UseVisualStyleBackColor = false;
@@ -473,10 +492,10 @@
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button11.Font = new System.Drawing.Font("Corbel", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button11.Location = new System.Drawing.Point(6, 258);
+            this.button11.Font = new System.Drawing.Font("Corbel", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button11.Location = new System.Drawing.Point(6, 194);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(250, 54);
+            this.button11.Size = new System.Drawing.Size(250, 35);
             this.button11.TabIndex = 7;
             this.button11.Text = "SINIFIN DERS DÖNEM TOPLAM PUANLARI";
             this.button11.UseVisualStyleBackColor = false;
@@ -487,10 +506,10 @@
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button9.Font = new System.Drawing.Font("Corbel", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button9.Font = new System.Drawing.Font("Corbel", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button9.Location = new System.Drawing.Point(6, 26);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(250, 58);
+            this.button9.Size = new System.Drawing.Size(250, 39);
             this.button9.TabIndex = 3;
             this.button9.Text = "ENLER";
             this.button9.UseVisualStyleBackColor = false;
@@ -501,10 +520,10 @@
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button8.Font = new System.Drawing.Font("Corbel", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button8.Location = new System.Drawing.Point(6, 150);
+            this.button8.Font = new System.Drawing.Font("Corbel", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button8.Location = new System.Drawing.Point(6, 114);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(250, 49);
+            this.button8.Size = new System.Drawing.Size(250, 30);
             this.button8.TabIndex = 5;
             this.button8.Text = "SINIFLARIN TOPLU PUANI";
             this.button8.UseVisualStyleBackColor = false;
@@ -515,10 +534,10 @@
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button5.Font = new System.Drawing.Font("Corbel", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(6, 93);
+            this.button5.Font = new System.Drawing.Font("Corbel", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.Location = new System.Drawing.Point(6, 77);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(250, 44);
+            this.button5.Size = new System.Drawing.Size(250, 25);
             this.button5.TabIndex = 4;
             this.button5.Text = "ÖĞRENCİ TOPLAM DÖNEM PUANLARI";
             this.button5.UseVisualStyleBackColor = false;
@@ -609,7 +628,7 @@
             this.cmbsınıfsec.FormattingEnabled = true;
             this.cmbsınıfsec.Location = new System.Drawing.Point(313, 202);
             this.cmbsınıfsec.Name = "cmbsınıfsec";
-            this.cmbsınıfsec.Size = new System.Drawing.Size(175, 48);
+            this.cmbsınıfsec.Size = new System.Drawing.Size(175, 39);
             this.cmbsınıfsec.TabIndex = 1;
             this.cmbsınıfsec.SelectedIndexChanged += new System.EventHandler(this.cmbsınıfsec_SelectedIndexChanged);
             // 
@@ -630,7 +649,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(313, 162);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 24);
+            this.label14.Size = new System.Drawing.Size(79, 19);
             this.label14.TabIndex = 21;
             this.label14.Text = "SINIF SEÇ:";
             // 
@@ -750,7 +769,7 @@
             this.lblogrenciid.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblogrenciid.Location = new System.Drawing.Point(204, 33);
             this.lblogrenciid.Name = "lblogrenciid";
-            this.lblogrenciid.Size = new System.Drawing.Size(0, 24);
+            this.lblogrenciid.Size = new System.Drawing.Size(0, 19);
             this.lblogrenciid.TabIndex = 19;
             // 
             // groupBox8
@@ -770,11 +789,11 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 23);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 282);
+            this.dataGridView1.Size = new System.Drawing.Size(462, 287);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -783,7 +802,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(23, 35);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 24);
+            this.label13.Size = new System.Drawing.Size(97, 19);
             this.label13.TabIndex = 18;
             this.label13.Text = "ÖĞRENCİ İD:";
             // 
@@ -794,7 +813,7 @@
             this.lbltoplamderssayisi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbltoplamderssayisi.Location = new System.Drawing.Point(171, 241);
             this.lbltoplamderssayisi.Name = "lbltoplamderssayisi";
-            this.lbltoplamderssayisi.Size = new System.Drawing.Size(0, 24);
+            this.lbltoplamderssayisi.Size = new System.Drawing.Size(0, 19);
             this.lbltoplamderssayisi.TabIndex = 17;
             // 
             // lblogrencinumara
@@ -804,7 +823,7 @@
             this.lblogrencinumara.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblogrencinumara.Location = new System.Drawing.Point(204, 109);
             this.lblogrencinumara.Name = "lblogrencinumara";
-            this.lblogrencinumara.Size = new System.Drawing.Size(0, 24);
+            this.lblogrencinumara.Size = new System.Drawing.Size(0, 19);
             this.lblogrencinumara.TabIndex = 15;
             // 
             // lblogrenciadsoyad
@@ -814,7 +833,7 @@
             this.lblogrenciadsoyad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblogrenciadsoyad.Location = new System.Drawing.Point(204, 71);
             this.lblogrenciadsoyad.Name = "lblogrenciadsoyad";
-            this.lblogrenciadsoyad.Size = new System.Drawing.Size(0, 24);
+            this.lblogrenciadsoyad.Size = new System.Drawing.Size(0, 19);
             this.lblogrenciadsoyad.TabIndex = 14;
             // 
             // label5
@@ -822,7 +841,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(23, 111);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 24);
+            this.label5.Size = new System.Drawing.Size(92, 19);
             this.label5.TabIndex = 8;
             this.label5.Text = "NUMARASI:";
             // 
@@ -831,7 +850,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(23, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 24);
+            this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 6;
             this.label3.Text = "ADI SOYADI:";
             // 
@@ -849,16 +868,30 @@
             // pckogrencifoto
             // 
             this.pckogrencifoto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pckogrencifoto.Location = new System.Drawing.Point(3, 28);
+            this.pckogrencifoto.Location = new System.Drawing.Point(3, 23);
             this.pckogrencifoto.Name = "pckogrencifoto";
-            this.pckogrencifoto.Size = new System.Drawing.Size(284, 190);
+            this.pckogrencifoto.Size = new System.Drawing.Size(284, 195);
             this.pckogrencifoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pckogrencifoto.TabIndex = 0;
             this.pckogrencifoto.TabStop = false;
             // 
+            // btnsinifdersdonemnottable
+            // 
+            this.btnsinifdersdonemnottable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnsinifdersdonemnottable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnsinifdersdonemnottable.Font = new System.Drawing.Font("Corbel", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnsinifdersdonemnottable.Location = new System.Drawing.Point(6, 241);
+            this.btnsinifdersdonemnottable.Name = "btnsinifdersdonemnottable";
+            this.btnsinifdersdonemnottable.Size = new System.Drawing.Size(250, 35);
+            this.btnsinifdersdonemnottable.TabIndex = 8;
+            this.btnsinifdersdonemnottable.Text = "SINIF DERS DÖNEM NOT TABLOSU";
+            this.btnsinifdersdonemnottable.UseVisualStyleBackColor = false;
+            this.btnsinifdersdonemnottable.Click += new System.EventHandler(this.btnsinifdersdonemnottable_Click);
+            // 
             // frmistatistikler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1603, 854);
@@ -961,5 +994,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnsinifdersdonemnottable;
     }
 }

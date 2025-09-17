@@ -547,5 +547,14 @@ namespace PERFORMANS
             frmdatagrid2.Show();
 
         }
+
+        private void btnsinifdersdonemnottable_Click(object sender, EventArgs e)
+        {
+            frmpuankayitlari frmpuankayitlari=new frmpuankayitlari();
+            frmpuankayitlari.datasec = "puankayitlariders";
+            frmpuankayitlari.brans = bransnum;
+            frmpuankayitlari.sinif = int.Parse(cmbsınıfsec.SelectedValue.ToString());
+            frmpuankayitlari.Show();
+        }
     }
 }

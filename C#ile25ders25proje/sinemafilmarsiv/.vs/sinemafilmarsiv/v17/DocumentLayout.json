@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\",
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|c:\\users\\ceng\u0130z\\desktop\\c#allproject\\c#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\c#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|solutionrelative:sinemafilmarsiv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|solutionrelative:sinemafilmarsiv\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|c:\\users\\ceng\u0130z\\desktop\\c#allproject\\c#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|solutionrelative:sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|solutionrelative:sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|c:\\users\\ceng\u0130z\\desktop\\c#allproject\\c#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|solutionrelative:sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E4B1A3-0307-49AA-BB4E-D1E358A2A6A1}|sinemafilmarsiv\\sinemafilmarsiv.csproj|solutionrelative:sinemafilmarsiv\\tamekran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,12 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -50,11 +46,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "tamekran.cs",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs",
               "RelativeDocumentMoniker": "sinemafilmarsiv\\tamekran.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs",
               "RelativeToolTip": "sinemafilmarsiv\\tamekran.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -63,11 +59,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "tamekran.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs",
               "RelativeDocumentMoniker": "sinemafilmarsiv\\tamekran.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs [Design]",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\tamekran.cs [Design]",
               "RelativeToolTip": "sinemafilmarsiv\\tamekran.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T13:59:13.256Z",
@@ -77,11 +73,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs",
               "RelativeDocumentMoniker": "sinemafilmarsiv\\Form1.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs",
               "RelativeToolTip": "sinemafilmarsiv\\Form1.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAuwJUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAywBwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T10:45:14.293Z",
               "EditorCaption": ""
@@ -90,9 +86,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs",
               "RelativeDocumentMoniker": "sinemafilmarsiv\\Form1.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\c#allproject\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\C#ile25ders25proje\\sinemafilmarsiv\\sinemafilmarsiv\\Form1.cs [Design]",
               "RelativeToolTip": "sinemafilmarsiv\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T10:16:02.948Z",

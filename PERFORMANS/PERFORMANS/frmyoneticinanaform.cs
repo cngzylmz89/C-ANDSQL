@@ -63,8 +63,10 @@ namespace PERFORMANS
             dataGridView2.DataSource = ds.Tables[0];
             dataGridView2.Columns[0].HeaderText = "ÖĞRETMEN İD";
             dataGridView2.Columns[1].HeaderText = "T.C. KİMLİK NUMARA";
-            dataGridView2.Columns[2].HeaderText = "SİFRE";
-            dataGridView2.Columns[3].HeaderText = "BRANS ADI";
+            dataGridView2.Columns[2].HeaderText = "ADI SOYADI";
+            dataGridView2.Columns[3].HeaderText = "SIFRE";
+            dataGridView2.Columns[4].HeaderText = "BRANS ADI";
+
         }
         int dersprogramisiraoku;
         void dersprogramilist()
