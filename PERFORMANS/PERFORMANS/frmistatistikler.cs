@@ -39,6 +39,7 @@ namespace PERFORMANS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        public int ogretmennum;
         public int bransnum;
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -254,7 +255,7 @@ namespace PERFORMANS
                 //ÖLÇÜT OKU
                 bransnum = 1;
                 con.Open();
-                OleDbCommand cmdolcutoku = new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC, OLCUTDORT, OLCUTBES FROM TBLOGRETMENLER WHERE BRANS=" + bransnum, con);
+                OleDbCommand cmdolcutoku = new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC, OLCUTDORT, OLCUTBES FROM TBLOGRETMENLER WHERE OGRETMENID=" + ogretmennum, con);
                 OleDbDataReader rd = cmdolcutoku.ExecuteReader();
                 while (rd.Read())
                 {

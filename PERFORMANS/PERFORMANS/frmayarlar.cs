@@ -20,13 +20,13 @@ namespace PERFORMANS
         baglantisinif conn= new baglantisinif();
 
         
-        public int bransayar;
+        public int ogretmenayar;
         
         private void frmayarlar_Load(object sender, EventArgs e)
         {
             OleDbConnection con=new OleDbConnection(conn.baglan);
             con.Open(); 
-            OleDbCommand komutolcutoku=new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC, OLCUTDORT,OLCUTBES FROM TBLOGRETMENLER WHERE BRANS="+bransayar,con);
+            OleDbCommand komutolcutoku=new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC, OLCUTDORT,OLCUTBES FROM TBLOGRETMENLER WHERE OGRETMENID="+ogretmenayar,con);
             OleDbDataReader rd=komutolcutoku.ExecuteReader();
             while (rd.Read())
             {
@@ -44,7 +44,7 @@ namespace PERFORMANS
             OleDbConnection con = new OleDbConnection(conn.baglan);
             DialogResult result=MessageBox.Show("Olcutler güncellenecek. Onaylıyor musunuz?","Soru",MessageBoxButtons.YesNo, MessageBoxIcon.Question); 
             con.Open();
-            OleDbCommand komutolcutguncelle=new OleDbCommand("update TBLOGRETMENLER SET OLCUTBIR=@P1, OLCUTIKI=@P2, OLCUTUC=@P3, OLCUTDORT=@P4, OLCUTBES=@P5 WHERE BRANS="+bransayar,con);
+            OleDbCommand komutolcutguncelle=new OleDbCommand("update TBLOGRETMENLER SET OLCUTBIR=@P1, OLCUTIKI=@P2, OLCUTUC=@P3, OLCUTDORT=@P4, OLCUTBES=@P5 WHERE OGRETMENID="+ogretmenayar,con);
             komutolcutguncelle.Parameters.AddWithValue("@P1", rcholcutbir.Text);
             komutolcutguncelle.Parameters.AddWithValue("@P2", rcholcutiki.Text);
             komutolcutguncelle.Parameters.AddWithValue("@P3", rcholcutuc.Text);
