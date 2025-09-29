@@ -727,7 +727,7 @@ namespace PERFORMANS
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             frmayarlar frmayarlar = new frmayarlar();
-            frmayarlar.bransayar = bransid;
+            frmayarlar.ogretmenayar = ogretmenid;
             frmayarlar.Show();
 
         }
@@ -737,6 +737,7 @@ namespace PERFORMANS
 
             frmistatistikler frmistatistikler = new frmistatistikler();
             frmistatistikler.rol = "ogretmen";
+            frmistatistikler.ogretmennum = ogretmenid;
             frmistatistikler.bransnum = bransid;
             frmistatistikler.Show();
 
