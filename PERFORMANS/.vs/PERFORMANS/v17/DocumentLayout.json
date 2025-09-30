@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmistatistikler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmistatistikler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmanaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmanaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +11,24 @@
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmanaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmbasla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmbasla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\ceng\u0130z\\desktop\\c#andsql\\performans\\performans\\frmistatistikler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmistatistikler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmistatistikler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmistatistikler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\ceng\u0130z\\desktop\\c#andsql\\performans\\performans\\frmayarlar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmayarlar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmayarlar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmayarlar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmayarlar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmbasla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmbasla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmpuankayitlari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,7 +105,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -121,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "frmayarlar.cs",
               "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmayarlar.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmayarlar.cs",
@@ -134,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmistatistikler.cs",
               "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmistatistikler.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmistatistikler.cs",
@@ -147,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "frmbasla.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmbasla.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmbasla.cs",
@@ -159,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "frmanaform.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmanaform.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmanaform.cs",
@@ -171,13 +171,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmanaform.cs",
               "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmanaform.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmanaform.cs",
               "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmanaform.cs",
               "RelativeToolTip": "PERFORMANS\\frmanaform.cs",
-              "ViewState": "AgIAANMCAAAAAAAAAAAkwOQCAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAIUBAAAAAAAAAAAowJIBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-03T14:35:35.223Z",
               "EditorCaption": ""
@@ -197,15 +197,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "frmistatistikler.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmistatistikler.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmistatistikler.cs",
               "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmistatistikler.cs [Design]",
               "RelativeToolTip": "PERFORMANS\\frmistatistikler.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T07:02:37.564Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-06T07:02:37.564Z"
             },
             {
               "$type": "Document",
@@ -247,14 +246,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "frmayarlar.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmayarlar.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmayarlar.cs",
               "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmayarlar.cs [Design]",
               "RelativeToolTip": "PERFORMANS\\frmayarlar.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T07:08:33.109Z"
+              "WhenOpened": "2025-09-06T07:08:33.109Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
