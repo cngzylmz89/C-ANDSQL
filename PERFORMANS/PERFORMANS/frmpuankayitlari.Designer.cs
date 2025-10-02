@@ -40,6 +40,7 @@
             this.pERFORMANSISTEMIDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.raporBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pERFORMANSISTEMIDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.raporBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pERFORMANSISTEMIDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,19 +60,20 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 19);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(767, 379);
+            this.dataGridView1.Size = new System.Drawing.Size(1023, 467);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Location = new System.Drawing.Point(8, 23);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 38);
+            this.button1.Size = new System.Drawing.Size(176, 47);
             this.button1.TabIndex = 1;
             this.button1.Text = "RAPOR AL";
             this.button1.UseVisualStyleBackColor = true;
@@ -82,21 +84,25 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.reportViewer3);
             this.groupBox1.Controls.Add(this.reportViewer2);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(4, 114);
+            this.groupBox1.Location = new System.Drawing.Point(5, 140);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(773, 398);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1031, 490);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // reportViewer2
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer2.Location = new System.Drawing.Point(3, 16);
+            this.reportViewer2.Location = new System.Drawing.Point(4, 19);
+            this.reportViewer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(767, 379);
+            this.reportViewer2.Size = new System.Drawing.Size(1023, 467);
             this.reportViewer2.TabIndex = 1;
             this.reportViewer2.Visible = false;
             // 
@@ -105,21 +111,33 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(16, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(753, 66);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1004, 81);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
+            // reportViewer3
+            // 
+            this.reportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer3.Location = new System.Drawing.Point(4, 19);
+            this.reportViewer3.Name = "reportViewer3";
+            this.reportViewer3.ServerReport.BearerToken = null;
+            this.reportViewer3.Size = new System.Drawing.Size(1023, 467);
+            this.reportViewer3.TabIndex = 2;
+            this.reportViewer3.Visible = false;
+            // 
             // frmpuankayitlari
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 517);
+            this.ClientSize = new System.Drawing.Size(1036, 636);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmpuankayitlari";
             this.Text = "PUAN KAYITLARI";
             this.Load += new System.EventHandler(this.frmpuankayitlari_Load);
@@ -159,6 +177,7 @@
       //  private PERFORMANSISTEMIDataSet4 pERFORMANSISTEMIDataSet4;
         //private System.Windows.Forms.BindingSource raporBindingSource4;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
         // private PERFORMANSISTEMIDataSet4TableAdapters.raporTableAdapter raporTableAdapter1;
         // private PERFORMANSISTEMIDataSet6TableAdapters.raporTableAdapter raporTableAdapter1;
     }
