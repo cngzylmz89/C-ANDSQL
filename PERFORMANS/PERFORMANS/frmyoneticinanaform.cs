@@ -77,8 +77,7 @@ namespace PERFORMANS
             DataTable dtprogramgor = new DataTable();
             dersprogramilistele.Fill(dtprogramgor);
             dataGridView1.DataSource = dtprogramgor;
-           
-
+            
             con.Open();
             OleDbCommand siraoku = new OleDbCommand("select  count(*) from TBLDERSPROGRAMI", con);
             OleDbDataReader siraokurd=siraoku.ExecuteReader();

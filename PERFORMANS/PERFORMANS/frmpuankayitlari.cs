@@ -45,7 +45,6 @@ namespace PERFORMANS
 
             if (datasec == "puankayitlari")
             {
-                button1.Text = "RAPOR AL(PUAN KAYITLARI)";
                 con.Open();
                 OleDbDataAdapter puankayitlari = new OleDbDataAdapter("SELECT     NOTID AS 'NOT NUMARASI',    BRANSADI AS 'DERS ADI',    SAATAD AS 'DERS SAATİ',    SINIFAD AS 'SINIF',    OGRENCIADISOYADI AS 'ÖĞRENCİNİN ADI SOYADI',    OGRENCINUMARASI AS 'ÖĞRENCİ NUMARASI',   TARIH AS 'TARİH',    [1_OLCUT],   [2_OLCUT],    [3_OLCUT],    [4_OLCUT],    [5_OLCUT],    UYARIVARYOK,    UYARI,   TOPLAMPUAN,    HAFTA  FROM    (        (            (               TBLNOTLAR                INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID = TBLNOTLAR.BRANS            )           INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID = TBLNOTLAR.DERSSAATI        )       INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID = TBLNOTLAR.SINIF    )    INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRENCIID = TBLNOTLAR.OGRENCININID ", con);
                 DataTable dataTable = new DataTable();
@@ -54,7 +53,7 @@ namespace PERFORMANS
             }
             else if (datasec == "puanlanmamisdersler")
             {
-                button1.Text="RAPOR AL(PUANLANMAMIŞ DERSLER)";
+                
                 con.Open();
                 OleDbCommand puanlanmamisdersler = new OleDbCommand("SELECT KAYITID AS 'SIRA NUMARASI', GUNLER AS 'GÜN', SINIFAD AS 'SINIF', SAATAD AS 'DERS SAATİ', BRANSADI AS 'DERS ADI', ADISOYADI AS 'ÖĞRETMEN', OLCDURUM AS 'ÖLÇÜM DURUMU' FROM ((   ( (   TBLDERSPROGRAMI INNER JOIN TBLGUN ON TBLGUN.HAFTANINGUNU = TBLDERSPROGRAMI.TARIH   ) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID = TBLDERSPROGRAMI.SINIF) INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID = TBLDERSPROGRAMI.DERSSAATI) INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID = TBLDERSPROGRAMI.DERS) INNER JOIN TBLOGRETMENLER ON TBLOGRETMENLER.OGRETMENID = TBLDERSPROGRAMI.OGRETMEN WHERE OLCDURUM=@O1 ORDER BY KAYITID ASC", con);
                 puanlanmamisdersler.Parameters.AddWithValue("@O1", false);
@@ -68,7 +67,6 @@ namespace PERFORMANS
             }
             else if (datasec == "puankayitlariders")
             {
-                button1.Text = "RAPOR AL(PUAN KAYITLARI)";
                 con.Open();
                 OleDbCommand puankayitlaricmd = new OleDbCommand("SELECT     NOTID AS 'NOT NUMARASI',    BRANSADI AS 'DERS ADI',    SAATAD AS 'DERS SAATİ',    SINIFAD AS 'SINIF',    OGRENCIADISOYADI AS 'ÖĞRENCİNİN ADI SOYADI',    OGRENCINUMARASI AS 'ÖĞRENCİ NUMARASI',   TARIH AS 'TARİH',    [1_OLCUT],   [2_OLCUT],    [3_OLCUT],    [4_OLCUT],    [5_OLCUT],    UYARIVARYOK,    UYARI,   TOPLAMPUAN,    HAFTA  FROM    (        (            (               TBLNOTLAR                INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID = TBLNOTLAR.BRANS            )           INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID = TBLNOTLAR.DERSSAATI        )       INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID = TBLNOTLAR.SINIF    )    INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRENCIID = TBLNOTLAR.OGRENCININID WHERE BRANS=@P1 AND SINIF=@P2 ORDER BY NOTID ASC ", con);
                 puankayitlaricmd.Parameters.AddWithValue("@P1", brans);
@@ -84,78 +82,41 @@ namespace PERFORMANS
 
             //this.reportViewer1.RefreshReport();
             //this.reportViewer2.RefreshReport();
-
-            this.reportViewer3.RefreshReport();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (button1.Text == "RAPOR AL PUAN KAYITLARI")
+            if (button1.Text == "RAPOR AL")
             {
-                if(button1.Text=="RAPOR AL(PUAN KAYITLARI)")
-                {
-                    reportViewer2.Visible = true;
-                    OleDbConnection con = new OleDbConnection(conn.baglan);
-                    con.Open();
-                    OleDbCommand notgor = new OleDbCommand("SELECT NOTID, BRANSADI, SAATAD, SINIFAD, OGRENCIADISOYADI, OGRENCINUMARASI, TARIH, [1_OLCUT] AS OLCUTBIR, [2_OLCUT] AS OLCUTIKI, [3_OLCUT] AS OLCUTUC, [4_OLCUT] AS OLCUTDORT, [5_OLCUT] AS OLCUTBES, UYARIVARYOK, UYARI, TOPLAMPUAN, HAFTA FROM (((TBLNOTLAR INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID = TBLNOTLAR.BRANS) INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID = TBLNOTLAR.DERSSAATI) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID = TBLNOTLAR.SINIF) INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRENCIID = TBLNOTLAR.OGRENCININID ORDER BY NOTID ASC", con);
-                    OleDbDataAdapter notgoradp = new OleDbDataAdapter();
-                    notgoradp.SelectCommand = notgor;
-                    DataTable dt = new DataTable();
-                    notgoradp.Fill(dt);
+                reportViewer2.Visible = true;
+                OleDbConnection con = new OleDbConnection(conn.baglan);
+                con.Open();
+                OleDbCommand notgor = new OleDbCommand("SELECT NOTID, BRANSADI, SAATAD, SINIFAD, OGRENCIADISOYADI, OGRENCINUMARASI, TARIH, [1_OLCUT] AS OLCUTBIR, [2_OLCUT] AS OLCUTIKI, [3_OLCUT] AS OLCUTUC, [4_OLCUT] AS OLCUTDORT, [5_OLCUT] AS OLCUTBES, UYARIVARYOK, UYARI, TOPLAMPUAN, HAFTA FROM (((TBLNOTLAR INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID = TBLNOTLAR.BRANS) INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID = TBLNOTLAR.DERSSAATI) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID = TBLNOTLAR.SINIF) INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRENCIID = TBLNOTLAR.OGRENCININID ORDER BY NOTID ASC", con);
+                OleDbDataAdapter notgoradp = new OleDbDataAdapter();
+                notgoradp.SelectCommand = notgor;
+                DataTable dt = new DataTable();
+                notgoradp.Fill(dt);
 
-                    reportViewer2.LocalReport.DataSources.Clear();
-                    ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-                    reportViewer2.LocalReport.ReportPath = ".//Report2.rdlc";
-                    reportViewer2.LocalReport.DataSources.Add(rds);
-                    this.reportViewer2.RefreshReport();
+                reportViewer2.LocalReport.DataSources.Clear();
+                ReportDataSource rds = new ReportDataSource("DataSet1", dt);
+                reportViewer2.LocalReport.ReportPath = ".//Report2.rdlc";
+                reportViewer2.LocalReport.DataSources.Add(rds);
+                this.reportViewer2.RefreshReport();
 
-                    con.Close();
-                    button1.Text = "VERİLERİ GÖSTER";
-                }
-                else if (button1.Text == "VERİLERİ GÖSTER")
-                {
-                    reportViewer2.Visible = false;
-                    button1.Text = "RAPOR AL (PUAN KAYITLARI)";
-                }
-
+                con.Close();
+                button1.Text = "VERİLERİ GÖSTER";
             }
-
-            else if(button1.Text=="RAPOR AL(PUANLANMAMIŞ DERSLER)")
+            else if(button1.Text=="VERİLERİ GÖSTER")
             {
-                if (button1.Text == "RAPOR AL(PUANLANMAMIŞ DERSLER)")
-                {
-                    reportViewer1.Visible = false;
-                    reportViewer3.Visible = true;
-                    OleDbConnection con = new OleDbConnection(conn.baglan);
-                    con.Open();
-                    OleDbCommand notgor = new OleDbCommand("SELECT KAYITID, GUNLER, SINIFAD, SAATAD, BRANSADI, ADISOYADI, OLCDURUM FROM ((( ( ( TBLDERSPROGRAMI INNER JOIN TBLGUN ON TBLGUN.HAFTANINGUNU = TBLDERSPROGRAMI.TARIH ) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID = TBLDERSPROGRAMI.SINIF) INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID = TBLDERSPROGRAMI.DERSSAATI) INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID = TBLDERSPROGRAMI.DERS) INNER JOIN TBLOGRETMENLER ON TBLOGRETMENLER.OGRETMENID = TBLDERSPROGRAMI.OGRETMEN WHERE OLCDURUM=@O1 ORDER BY KAYITID ASC", con);
-                    notgor.Parameters.AddWithValue("@O1", false);
-                    OleDbDataAdapter notgoradp = new OleDbDataAdapter();
-                    notgoradp.SelectCommand = notgor;
-                    DataTable dt = new DataTable();
-                    notgoradp.Fill(dt);
-                    reportViewer3.LocalReport.DataSources.Clear();
-                    ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-                    reportViewer3.LocalReport.ReportPath = ".//Report3.rdlc";
-                    reportViewer3.LocalReport.DataSources.Add(rds);
-                    this.reportViewer3.RefreshReport();
-                    con.Close();
-                    button1.Text = "VERİLERİ GÖSTER";
-                }
-                else if (button1.Text == "VERİLERİ GÖSTER")
-                {
-                    reportViewer1.Visible = false;
-                    button1.Text = "RAPOR AL (PUANLANMAMIŞ DERSLER)";
-                }
+                reportViewer2.Visible = false;
+                button1.Text = "RAPOR AL";
             }
-           
+            
 
 
 
-
-
-
-
+            
         }
 
        
