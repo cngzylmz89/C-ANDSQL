@@ -77,7 +77,21 @@ namespace PERFORMANS
             DataTable dtprogramgor = new DataTable();
             dersprogramilistele.Fill(dtprogramgor);
             dataGridView1.DataSource = dtprogramgor;
-            
+            DataGridViewCellStyle style = new DataGridViewCellStyle();
+            for(int i= 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                if (Convert.ToBoolean(dataGridView1.Rows[i].Cells[6].Value) == true)
+                {
+                    style.BackColor = Color.LightGreen;
+                    dataGridView1.Rows[i].DefaultCellStyle = style;
+                }
+                else
+                {
+                    style.BackColor = Color.Red;
+                    dataGridView1.Rows[i].DefaultCellStyle = style;
+                }
+            }
+
             con.Open();
             OleDbCommand siraoku = new OleDbCommand("select  count(*) from TBLDERSPROGRAMI", con);
             OleDbDataReader siraokurd=siraoku.ExecuteReader();

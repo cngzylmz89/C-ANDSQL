@@ -112,6 +112,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.rdygunluk = new System.Windows.Forms.RadioButton();
+            this.rdyhaftalik = new System.Windows.Forms.RadioButton();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -148,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -168,6 +172,8 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::PERFORMANS.Properties.Resources.icons8_close_40px;
@@ -177,11 +183,12 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click_1);
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::PERFORMANS.Properties.Resources.icons8_subtract_40px;
@@ -191,7 +198,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click_1);
             // 
             // pictureBox4
@@ -268,8 +274,6 @@
             // chkhesapla
             // 
             this.chkhesapla.AutoSize = true;
-            this.chkhesapla.Checked = true;
-            this.chkhesapla.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkhesapla.Font = new System.Drawing.Font("Monotype Corsiva", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.chkhesapla.ForeColor = System.Drawing.Color.Black;
             this.chkhesapla.Location = new System.Drawing.Point(29, 47);
@@ -303,7 +307,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.groupBox6);
             this.groupBox7.Controls.Add(this.dataGridView2);
-            this.groupBox7.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox7.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox7.Location = new System.Drawing.Point(7, 127);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(403, 587);
@@ -1200,17 +1204,16 @@
             // lblders
             // 
             this.lblders.AutoSize = true;
-            this.lblders.Location = new System.Drawing.Point(842, 96);
+            this.lblders.Location = new System.Drawing.Point(432, 100);
             this.lblders.Name = "lblders";
             this.lblders.Size = new System.Drawing.Size(48, 18);
             this.lblders.TabIndex = 7;
             this.lblders.Text = "label1";
-            this.lblders.Visible = false;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(936, 103);
+            this.label12.Location = new System.Drawing.Point(634, 106);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 18);
             this.label12.TabIndex = 19;
@@ -1220,7 +1223,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1060, 100);
+            this.label16.Location = new System.Drawing.Point(634, 106);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(56, 18);
             this.label16.TabIndex = 20;
@@ -1230,12 +1233,47 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(1205, 105);
+            this.label18.Location = new System.Drawing.Point(634, 100);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(56, 18);
             this.label18.TabIndex = 21;
             this.label18.Text = "label18";
             this.label18.Visible = false;
+            // 
+            // rdygunluk
+            // 
+            this.rdygunluk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdygunluk.AutoSize = true;
+            this.rdygunluk.Location = new System.Drawing.Point(60, 5);
+            this.rdygunluk.Name = "rdygunluk";
+            this.rdygunluk.Size = new System.Drawing.Size(221, 22);
+            this.rdygunluk.TabIndex = 22;
+            this.rdygunluk.Text = "GÜNLÜK DEĞERLENDİR";
+            this.rdygunluk.UseVisualStyleBackColor = true;
+            // 
+            // rdyhaftalik
+            // 
+            this.rdyhaftalik.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdyhaftalik.AutoSize = true;
+            this.rdyhaftalik.Location = new System.Drawing.Point(451, 5);
+            this.rdyhaftalik.Name = "rdyhaftalik";
+            this.rdyhaftalik.Size = new System.Drawing.Size(232, 22);
+            this.rdyhaftalik.TabIndex = 23;
+            this.rdyhaftalik.Text = "HAFTALIK DEĞERLENDİR";
+            this.rdyhaftalik.UseVisualStyleBackColor = true;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox13.Controls.Add(this.rdygunluk);
+            this.groupBox13.Controls.Add(this.rdyhaftalik);
+            this.groupBox13.Location = new System.Drawing.Point(735, 99);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(689, 25);
+            this.groupBox13.TabIndex = 24;
+            this.groupBox13.TabStop = false;
             // 
             // frmanaform
             // 
@@ -1244,6 +1282,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1492, 884);
+            this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label12);
@@ -1253,6 +1292,7 @@
             this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(755, 465);
@@ -1302,6 +1342,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1392,6 +1434,9 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.RadioButton rdygunluk;
+        private System.Windows.Forms.RadioButton rdyhaftalik;
+        private System.Windows.Forms.GroupBox groupBox13;
     }
 }
 
