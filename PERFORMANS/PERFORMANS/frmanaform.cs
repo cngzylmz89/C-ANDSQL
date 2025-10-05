@@ -224,7 +224,7 @@ namespace PERFORMANS
         private void frmanaform_Load(object sender, EventArgs e)
         {
             
-           rdygunluk.Checked = true;
+           
             int hafta=haftaal(DateTime.Now);
             label18.Text = rol.ToString();
             OleDbConnection con = new OleDbConnection(conn.baglan);
@@ -453,58 +453,66 @@ namespace PERFORMANS
             int hafta=haftaal(DateTime.Now);
             OleDbConnection con = new OleDbConnection(conn.baglan);
             
-            if (cmbderssaati.SelectedItem != null)
+            if (cmbderssaati.SelectedItem != null )
             {
-                chkhesapla.Checked = false;
-                con.Open();
-                OleDbCommand dersvaryok = new OleDbCommand("select TARIH, DERSSAATI, DERS,OLCDURUM FROM TBLDERSPROGRAMI WHERE TARIH=@P1 AND DERSSAATI=@P2 AND SINIF=@P3 AND OLCDURUM=@P4 ", con);
-                dersvaryok.Parameters.AddWithValue("@P1", gun);
-                dersvaryok.Parameters.AddWithValue("@P2", cmbderssaati.SelectedValue);
-                dersvaryok.Parameters.AddWithValue("@P3", cmbsınıfsec.SelectedValue);
-                dersvaryok.Parameters.AddWithValue("@P4", false);
-                
-                OleDbDataReader dersvaryokrd = dersvaryok.ExecuteReader();
-                if (sira < 0)
+
+                if (rdygunluk.Checked != null && rdyhaftalik.Checked != null)
                 {
-                    if (lbldersadi.Text != "" && dersvaryokrd.Read() == true)
+                    chkhesapla.Checked = false;
+                    con.Open();
+                    OleDbCommand dersvaryok = new OleDbCommand("select TARIH, DERSSAATI, DERS,OLCDURUM FROM TBLDERSPROGRAMI WHERE TARIH=@P1 AND DERSSAATI=@P2 AND SINIF=@P3 AND OLCDURUM=@P4 ", con);
+                    dersvaryok.Parameters.AddWithValue("@P1", gun);
+                    dersvaryok.Parameters.AddWithValue("@P2", cmbderssaati.SelectedValue);
+                    dersvaryok.Parameters.AddWithValue("@P3", cmbsınıfsec.SelectedValue);
+                    dersvaryok.Parameters.AddWithValue("@P4", false);
+
+                    OleDbDataReader dersvaryokrd = dersvaryok.ExecuteReader();
+                    if (sira < 0)
                     {
-                        con.Close();
-                        degistir();
+                        if (lbldersadi.Text != "" && dersvaryokrd.Read() == true)
+                        {
+                            con.Close();
+                            degistir();
 
 
 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lütfen size tanımlanmış dersi ve sınıfı seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
                     }
-                    else
+                    con.Open();
+                    OleDbCommand komutdersoku = new OleDbCommand("select DERS from TBLDERSPROGRAMI WHERE SINIF=@P1 AND DERSSAATI=@P2 AND TARIH=@P3", con);
+                    komutdersoku.Parameters.AddWithValue("@P1", cmbsınıfsec.SelectedValue);
+                    komutdersoku.Parameters.AddWithValue("@P2", cmbderssaati.SelectedValue);
+                    komutdersoku.Parameters.AddWithValue("@P3", gun);
+                    OleDbDataReader komutdersokurd = komutdersoku.ExecuteReader();
+                    while (komutdersokurd.Read())
                     {
-                        MessageBox.Show("Lütfen size tanımlanmış dersi ve sınıfı seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        ogretmendersadi = int.Parse(komutdersokurd[0].ToString());
                     }
-                }
-                con.Open();
-                OleDbCommand komutdersoku = new OleDbCommand("select DERS from TBLDERSPROGRAMI WHERE SINIF=@P1 AND DERSSAATI=@P2 AND TARIH=@P3", con);
-                komutdersoku.Parameters.AddWithValue("@P1", cmbsınıfsec.SelectedValue);
-                komutdersoku.Parameters.AddWithValue("@P2", cmbderssaati.SelectedValue);
-                komutdersoku.Parameters.AddWithValue("@P3", gun);
-                OleDbDataReader komutdersokurd = komutdersoku.ExecuteReader();
-                while (komutdersokurd.Read())
-                {
-                    ogretmendersadi = int.Parse(komutdersokurd[0].ToString());
-                }
-                con.Close();
-                con.Open();
-                OleDbCommand komutderssayioku = new OleDbCommand("SELECT    count(*)  FROM     TBLDERSPROGRAMI WHERE   DERS = @P3    AND OGRETMEN = @P1    AND SINIF = @P2 AND OLCDURUM=@P4", con);
+                    con.Close();
+                    con.Open();
+                    OleDbCommand komutderssayioku = new OleDbCommand("SELECT    count(*)  FROM     TBLDERSPROGRAMI WHERE   DERS = @P3    AND OGRETMEN = @P1    AND SINIF = @P2 AND OLCDURUM=@P4", con);
 
-                komutderssayioku.Parameters.AddWithValue("@P3", ogretmendersadi);
-                komutderssayioku.Parameters.AddWithValue("@P1", ogretmenid);
-                komutderssayioku.Parameters.AddWithValue("@P2", cmbsınıfsec.SelectedValue);
-                komutderssayioku.Parameters.AddWithValue("@P4", false);
-                OleDbDataReader rd2 = komutderssayioku.ExecuteReader();
-                while (rd2.Read())
-                {
-                    ogretmenderssayi = int.Parse(rd2[0].ToString());
-                }
-                con.Close();
+                    komutderssayioku.Parameters.AddWithValue("@P3", ogretmendersadi);
+                    komutderssayioku.Parameters.AddWithValue("@P1", ogretmenid);
+                    komutderssayioku.Parameters.AddWithValue("@P2", cmbsınıfsec.SelectedValue);
+                    komutderssayioku.Parameters.AddWithValue("@P4", false);
+                    OleDbDataReader rd2 = komutderssayioku.ExecuteReader();
+                    while (rd2.Read())
+                    {
+                        ogretmenderssayi = int.Parse(rd2[0].ToString());
+                    }
+                    con.Close();
 
+                }
+                else
+                {
+                    MessageBox.Show("Bilgi","Lütfen değerlendirme şeklini seçiniz.(GÜNLÜK PUANLA, HAFTALIK PUAN). Günlük puanlayı seçerseniz sadece seçtiniğiz ders saati puanlanacak. Haftalık puanlayı seçerseniz seçtiğiniz sınıfın bulunduğunuz haftadaki seçtiğiniz bütün derslerini puanlayacak.", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                }
 
             }
 
@@ -924,11 +932,12 @@ namespace PERFORMANS
 
 
                 }
-                else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
-                con.Close();
-                if (lblogrenciadsoyad.Text != "")
-                { degistir(); }
+               
             }
+            else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
+            con.Close();
+            if (lblogrenciadsoyad.Text != "")
+            { degistir(); }
         }
         
 

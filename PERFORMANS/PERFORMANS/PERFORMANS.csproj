@@ -58,7 +58,7 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -110,6 +110,12 @@
     </Compile>
     <Compile Include="frmdatagrid2.Designer.cs">
       <DependentUpon>frmdatagrid2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdersprogrami.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdersprogrami.Designer.cs">
+      <DependentUpon>frmdersprogrami.cs</DependentUpon>
     </Compile>
     <Compile Include="frmenler.cs">
       <SubType>Form</SubType>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmdatagrid2.resx">
       <DependentUpon>frmdatagrid2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdersprogrami.resx">
+      <DependentUpon>frmdersprogrami.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmenler.resx">
       <DependentUpon>frmenler.cs</DependentUpon>
