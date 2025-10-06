@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\",
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\ceng\u0130z\\desktop\\c#andsql\\performans\\performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\ceng\u0130z\\desktop\\c#andsql\\performans\\performans\\frmenler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmenler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\performans\\performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\ceng\u0130z\\desktop\\c#andsql\\performans\\performans\\frmenler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmenler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\performans\\performans\\baglantisinif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\baglantisinif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -42,53 +34,49 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{e78e0cf7-2e4e-48a7-bf7f-a94d9330a3be}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{80c411e8-fd5e-4b16-914b-0d9d84172cc1}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmenler.cs",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmenler.cs",
-              "RelativeDocumentMoniker": "PERFORMANS\\frmenler.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmenler.cs",
-              "RelativeToolTip": "PERFORMANS\\frmenler.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Title": "baglantisinif.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\baglantisinif.cs",
+              "RelativeDocumentMoniker": "PERFORMANS\\baglantisinif.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\baglantisinif.cs",
+              "RelativeToolTip": "PERFORMANS\\baglantisinif.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T14:58:37.176Z",
+              "WhenOpened": "2025-10-06T07:58:01.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmenler.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmenler.cs",
-              "RelativeDocumentMoniker": "PERFORMANS\\frmenler.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmenler.cs [Design]",
-              "RelativeToolTip": "PERFORMANS\\frmenler.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T14:58:31.689Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmdersprogrami.cs",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmdersprogrami.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
               "RelativeToolTip": "PERFORMANS\\frmdersprogrami.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoCAAAAAAAAAAAAAGgCAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-05T13:44:43.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmdersprogrami.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmdersprogrami.cs",
-              "ToolTip": "C:\\Users\\CENG\u0130Z\\Desktop\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs [Design]",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs [Design]",
               "RelativeToolTip": "PERFORMANS\\frmdersprogrami.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-05T07:42:17.247Z",
