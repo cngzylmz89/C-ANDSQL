@@ -80,6 +80,34 @@ namespace PERFORMANS
         int tuesday7sinifid;
         int tuesday7kayitid;
 
+        int wednesday1dersid;
+        int wednesday1sinifid;
+        int wednesday1kayitid;
+
+        int wednesday2dersid;
+        int wednesday2sinifid;
+        int wednesday2kayitid;
+
+        int wednesday3dersid;
+        int wednesday3sinifid;
+        int wednesday3kayitid;
+
+        int wednesday4dersid;
+        int wednesday4sinifid;
+        int wednesday4kayitid;
+
+        int wednesday5dersid;
+        int wednesday5sinifid;
+        int wednesday5kayitid;
+
+        int wednesday6dersid;
+        int wednesday6sinifid;
+        int wednesday6kayitid;
+
+        int wednesday7dersid;
+        int wednesday7sinifid;
+        int wednesday7kayitid;
+
         public string sifrele(string s)
         {
             byte[] sdizi = ASCIIEncoding.ASCII.GetBytes(s);
@@ -615,6 +643,251 @@ namespace PERFORMANS
                 else
                 {
                     btntuesday7.BackColor = Color.Orange;
+                }
+            }
+            con.Close();
+
+            //çarşamba 1.saat
+            con.Open();
+            OleDbCommand wednesday1 = new OleDbCommand("select BRANSADI, DERS, SINIF,SINIFAD, KAYITID FROM (TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday1.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday1.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday1.Parameters.AddWithValue("@P3", "1");
+            OleDbDataReader drwednesday1 = wednesday1.ExecuteReader();
+            while (drwednesday1.Read())
+            {
+                btnwednesday1.Text = drwednesday1[0].ToString() + " " + drwednesday1[3].ToString();
+                wednesday1dersid = int.Parse(drwednesday1[1].ToString());
+                wednesday1sinifid = int.Parse(drwednesday1[2].ToString());
+                wednesday1kayitid = int.Parse(drwednesday1[4].ToString());
+            }
+
+            con.Close();
+            con.Open();
+            OleDbCommand wednesday1olc = new OleDbCommand("select OLCDURUM FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday1olc.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday1olc.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday1olc.Parameters.AddWithValue("@P3", "1");
+            OleDbDataReader drwednesday1olc = wednesday1olc.ExecuteReader();
+            while (drwednesday1olc.Read())
+            {
+                if (drwednesday1olc[0].ToString() == "True")
+                {
+                    btnwednesday1.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnwednesday1.BackColor = Color.Orange;
+                }
+            }
+            con.Close();
+
+            //çarşamba 2.saat
+            con.Open();
+            OleDbCommand wednesday2 = new OleDbCommand("select BRANSADI, DERS, SINIF,SINIFAD, KAYITID FROM (TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday2.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday2.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday2.Parameters.AddWithValue("@P3", "2");
+            OleDbDataReader drwednesday2 = wednesday2.ExecuteReader();
+            while (drwednesday2.Read())
+            {
+                btnwednesday2.Text = drwednesday2[0].ToString() + " " + drwednesday2[3].ToString();
+                wednesday2dersid = int.Parse(drwednesday2[1].ToString());
+                wednesday2sinifid = int.Parse(drwednesday2[2].ToString());
+                wednesday2kayitid = int.Parse(drwednesday2[4].ToString());
+            }
+
+            con.Close();
+            con.Open();
+            OleDbCommand wednesday2olc = new OleDbCommand("select OLCDURUM FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday2olc.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday2olc.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday2olc.Parameters.AddWithValue("@P3", "2");
+            OleDbDataReader drwednesday2olc = wednesday2olc.ExecuteReader();
+            while (drwednesday2olc.Read())
+            {
+                if (drwednesday2olc[0].ToString() == "True")
+                {
+                    btnwednesday2.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnwednesday2.BackColor = Color.Orange;
+                }
+            }
+            con.Close();
+
+            //çarşamba 3.saat
+            con.Open();
+            OleDbCommand wednesday3 = new OleDbCommand("select BRANSADI, DERS, SINIF,SINIFAD, KAYITID FROM (TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday3.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday3.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday3.Parameters.AddWithValue("@P3", "3");
+            OleDbDataReader drwednesday3 = wednesday3.ExecuteReader();
+            while (drwednesday3.Read())
+            {
+                btnwednesday3.Text = drwednesday3[0].ToString() + " " + drwednesday3[3].ToString();
+                wednesday3dersid = int.Parse(drwednesday3[1].ToString());
+                wednesday3sinifid = int.Parse(drwednesday3[2].ToString());
+                wednesday3kayitid = int.Parse(drwednesday3[4].ToString());
+            }
+
+            con.Close();
+            con.Open();
+            OleDbCommand wednesday3olc = new OleDbCommand("select OLCDURUM FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday3olc.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday3olc.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday3olc.Parameters.AddWithValue("@P3", "3");
+            OleDbDataReader drwednesday3olc = wednesday3olc.ExecuteReader();
+            while (drwednesday3olc.Read())
+            {
+                if (drwednesday3olc[0].ToString() == "True")
+                {
+                    btnwednesday3.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnwednesday3.BackColor = Color.Orange;
+                }
+            }
+            con.Close();
+
+            //çarşamba 4.saat
+            con.Open();
+            OleDbCommand wednesday4 = new OleDbCommand("select BRANSADI, DERS, SINIF,SINIFAD, KAYITID FROM (TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday4.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday4.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday4.Parameters.AddWithValue("@P3", "4");
+            OleDbDataReader drwednesday4 = wednesday4.ExecuteReader();
+            while (drwednesday4.Read())
+            {
+                btnwednesday4.Text = drwednesday4[0].ToString() + " " + drwednesday4[3].ToString();
+                wednesday4dersid = int.Parse(drwednesday4[1].ToString());
+                wednesday4sinifid = int.Parse(drwednesday4[2].ToString());
+                wednesday4kayitid = int.Parse(drwednesday4[4].ToString());
+            }
+
+            con.Close();
+            con.Open();
+            OleDbCommand wednesday4olc = new OleDbCommand("select OLCDURUM FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday4olc.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday4olc.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday4olc.Parameters.AddWithValue("@P3", "4");
+            OleDbDataReader drwednesday4olc = wednesday4olc.ExecuteReader();
+            while (drwednesday4olc.Read())
+            {
+                if (drwednesday4olc[0].ToString() == "True")
+                {
+                    btnwednesday4.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnwednesday4.BackColor = Color.Orange;
+                }
+            }
+            con.Close();
+
+            //çarşamba 5.saat
+            con.Open();
+            OleDbCommand wednesday5 = new OleDbCommand("select BRANSADI, DERS, SINIF,SINIFAD, KAYITID FROM (TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday5.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday5.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday5.Parameters.AddWithValue("@P3", "5");
+            OleDbDataReader drwednesday5 = wednesday5.ExecuteReader();
+            while (drwednesday5.Read())
+            {
+                btnwednesday5.Text = drwednesday5[0].ToString() + " " + drwednesday5[3].ToString();
+                wednesday5dersid = int.Parse(drwednesday5[1].ToString());
+                wednesday5sinifid = int.Parse(drwednesday5[2].ToString());
+                wednesday5kayitid = int.Parse(drwednesday5[4].ToString());
+            }
+
+            con.Close();
+            con.Open();
+            OleDbCommand wednesday5olc = new OleDbCommand("select OLCDURUM FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday5olc.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday5olc.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday5olc.Parameters.AddWithValue("@P3", "5");
+            OleDbDataReader drwednesday5olc = wednesday5olc.ExecuteReader();
+            while (drwednesday5olc.Read())
+            {
+                if (drwednesday5olc[0].ToString() == "True")
+                {
+                    btnwednesday5.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnwednesday5.BackColor = Color.Orange;
+                }
+            }
+            con.Close();
+
+            //çarşamba 6.saat
+            con.Open();
+            OleDbCommand wednesday6 = new OleDbCommand("select BRANSADI, DERS, SINIF,SINIFAD, KAYITID FROM (TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday6.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday6.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday6.Parameters.AddWithValue("@P3", "6");
+            OleDbDataReader drwednesday6 = wednesday6.ExecuteReader();
+            while (drwednesday6.Read())
+            {
+                btnwednesday6.Text = drwednesday6[0].ToString() + " " + drwednesday6[3].ToString();
+                wednesday6dersid = int.Parse(drwednesday6[1].ToString());
+                wednesday6sinifid = int.Parse(drwednesday6[2].ToString());
+                wednesday6kayitid = int.Parse(drwednesday6[4].ToString());
+            }
+
+            con.Close();
+            con.Open();
+            OleDbCommand wednesday6olc = new OleDbCommand("select OLCDURUM FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday6olc.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday6olc.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday6olc.Parameters.AddWithValue("@P3", "6");
+            OleDbDataReader drwednesday6olc = wednesday6olc.ExecuteReader();
+            while (drwednesday6olc.Read())
+            {
+                if (drwednesday6olc[0].ToString() == "True")
+                {
+                    btnwednesday6.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnwednesday6.BackColor = Color.Orange;
+                }
+            }
+            con.Close();
+
+            //çarşamba 7.saat
+            con.Open();
+            OleDbCommand wednesday7 = new OleDbCommand("select BRANSADI, DERS, SINIF,SINIFAD, KAYITID FROM (TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID) INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday7.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday7.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday7.Parameters.AddWithValue("@P3", "7");
+            OleDbDataReader drwednesday7 = wednesday7.ExecuteReader();
+            while (drwednesday7.Read())
+            {
+                btnwednesday7.Text = drwednesday7[0].ToString() + " " + drwednesday7[3].ToString();
+                wednesday7dersid = int.Parse(drwednesday7[1].ToString());
+                wednesday7sinifid = int.Parse(drwednesday7[2].ToString());
+                wednesday7kayitid = int.Parse(drwednesday7[4].ToString());
+            }
+
+            con.Close();
+            con.Open();
+            OleDbCommand wednesday7olc = new OleDbCommand("select OLCDURUM FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLDERSPROGRAMI.DERS=TBLBRANSLAR.BRANSID WHERE  TARIH=@P1 AND OGRETMEN=@P2 AND DERSSAATI=@P3", con);
+            wednesday7olc.Parameters.AddWithValue("@P1", "Wednesday");
+            wednesday7olc.Parameters.AddWithValue("@P2", ogretmenid);
+            wednesday7olc.Parameters.AddWithValue("@P3", "7");
+            OleDbDataReader drwednesday7olc = wednesday7olc.ExecuteReader();
+            while (drwednesday7olc.Read())
+            {
+                if (drwednesday7olc[0].ToString() == "True")
+                {
+                    btnwednesday7.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnwednesday7.BackColor = Color.Orange;
                 }
             }
             con.Close();

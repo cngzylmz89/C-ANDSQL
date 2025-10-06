@@ -84,11 +84,11 @@
             this.btnfriday6 = new System.Windows.Forms.Button();
             this.btnfriday7 = new System.Windows.Forms.Button();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lblpuanprogress = new System.Windows.Forms.Label();
+            this.lbltoplamders = new System.Windows.Forms.Label();
             this.lblpuansizders = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.lbltoplamders = new System.Windows.Forms.Label();
-            this.lblpuanprogress = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -148,6 +148,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::PERFORMANS.Properties.Resources.icons8_close_40px;
             this.pictureBox5.Location = new System.Drawing.Point(973, 12);
@@ -200,7 +201,7 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.OrangeRed;
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer4);
             this.splitContainer2.Size = new System.Drawing.Size(1060, 438);
-            this.splitContainer2.SplitterDistance = 681;
+            this.splitContainer2.SplitterDistance = 682;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -215,7 +216,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer3.Size = new System.Drawing.Size(681, 438);
+            this.splitContainer3.Size = new System.Drawing.Size(682, 438);
             this.splitContainer3.SplitterDistance = 42;
             this.splitContainer3.SplitterWidth = 3;
             this.splitContainer3.TabIndex = 0;
@@ -290,7 +291,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(681, 393);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(682, 393);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -358,7 +359,7 @@
             this.label5.Location = new System.Drawing.Point(564, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 61);
+            this.label5.Size = new System.Drawing.Size(116, 61);
             this.label5.TabIndex = 4;
             this.label5.Text = "CUMA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -804,7 +805,7 @@
             this.btnfriday1.Location = new System.Drawing.Point(564, 63);
             this.btnfriday1.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday1.Name = "btnfriday1";
-            this.btnfriday1.Size = new System.Drawing.Size(115, 43);
+            this.btnfriday1.Size = new System.Drawing.Size(116, 43);
             this.btnfriday1.TabIndex = 40;
             this.btnfriday1.Text = "  ";
             this.btnfriday1.UseVisualStyleBackColor = true;
@@ -816,7 +817,7 @@
             this.btnfriday2.Location = new System.Drawing.Point(564, 110);
             this.btnfriday2.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday2.Name = "btnfriday2";
-            this.btnfriday2.Size = new System.Drawing.Size(115, 43);
+            this.btnfriday2.Size = new System.Drawing.Size(116, 43);
             this.btnfriday2.TabIndex = 41;
             this.btnfriday2.Text = "  ";
             this.btnfriday2.UseVisualStyleBackColor = true;
@@ -828,7 +829,7 @@
             this.btnfriday3.Location = new System.Drawing.Point(564, 157);
             this.btnfriday3.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday3.Name = "btnfriday3";
-            this.btnfriday3.Size = new System.Drawing.Size(115, 43);
+            this.btnfriday3.Size = new System.Drawing.Size(116, 43);
             this.btnfriday3.TabIndex = 42;
             this.btnfriday3.Text = "  ";
             this.btnfriday3.UseVisualStyleBackColor = true;
@@ -840,7 +841,7 @@
             this.btnfriday4.Location = new System.Drawing.Point(564, 204);
             this.btnfriday4.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday4.Name = "btnfriday4";
-            this.btnfriday4.Size = new System.Drawing.Size(115, 43);
+            this.btnfriday4.Size = new System.Drawing.Size(116, 43);
             this.btnfriday4.TabIndex = 43;
             this.btnfriday4.Text = "  ";
             this.btnfriday4.UseVisualStyleBackColor = true;
@@ -852,7 +853,7 @@
             this.btnfriday5.Location = new System.Drawing.Point(564, 251);
             this.btnfriday5.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday5.Name = "btnfriday5";
-            this.btnfriday5.Size = new System.Drawing.Size(115, 43);
+            this.btnfriday5.Size = new System.Drawing.Size(116, 43);
             this.btnfriday5.TabIndex = 44;
             this.btnfriday5.Text = "  ";
             this.btnfriday5.UseVisualStyleBackColor = true;
@@ -864,7 +865,7 @@
             this.btnfriday6.Location = new System.Drawing.Point(564, 298);
             this.btnfriday6.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday6.Name = "btnfriday6";
-            this.btnfriday6.Size = new System.Drawing.Size(115, 43);
+            this.btnfriday6.Size = new System.Drawing.Size(116, 43);
             this.btnfriday6.TabIndex = 45;
             this.btnfriday6.Text = "  ";
             this.btnfriday6.UseVisualStyleBackColor = true;
@@ -876,7 +877,7 @@
             this.btnfriday7.Location = new System.Drawing.Point(564, 345);
             this.btnfriday7.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday7.Name = "btnfriday7";
-            this.btnfriday7.Size = new System.Drawing.Size(115, 46);
+            this.btnfriday7.Size = new System.Drawing.Size(116, 46);
             this.btnfriday7.TabIndex = 46;
             this.btnfriday7.Text = "  ";
             this.btnfriday7.UseVisualStyleBackColor = true;
@@ -898,9 +899,35 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer4.Size = new System.Drawing.Size(376, 438);
+            this.splitContainer4.Size = new System.Drawing.Size(375, 438);
             this.splitContainer4.SplitterDistance = 143;
             this.splitContainer4.TabIndex = 0;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.progressBar1.Location = new System.Drawing.Point(93, 83);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(200, 23);
+            this.progressBar1.TabIndex = 3;
+            // 
+            // lblpuanprogress
+            // 
+            this.lblpuanprogress.AutoSize = true;
+            this.lblpuanprogress.Location = new System.Drawing.Point(16, 89);
+            this.lblpuanprogress.Name = "lblpuanprogress";
+            this.lblpuanprogress.Size = new System.Drawing.Size(54, 17);
+            this.lblpuanprogress.TabIndex = 2;
+            this.lblpuanprogress.Text = "label15";
+            // 
+            // lbltoplamders
+            // 
+            this.lbltoplamders.AutoSize = true;
+            this.lbltoplamders.Location = new System.Drawing.Point(16, 45);
+            this.lbltoplamders.Name = "lbltoplamders";
+            this.lbltoplamders.Size = new System.Drawing.Size(54, 17);
+            this.lbltoplamders.TabIndex = 1;
+            this.lbltoplamders.Text = "label14";
             // 
             // lblpuansizders
             // 
@@ -917,34 +944,8 @@
             this.listBox1.ItemHeight = 17;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(376, 291);
+            this.listBox1.Size = new System.Drawing.Size(375, 291);
             this.listBox1.TabIndex = 0;
-            // 
-            // lbltoplamders
-            // 
-            this.lbltoplamders.AutoSize = true;
-            this.lbltoplamders.Location = new System.Drawing.Point(16, 45);
-            this.lbltoplamders.Name = "lbltoplamders";
-            this.lbltoplamders.Size = new System.Drawing.Size(54, 17);
-            this.lbltoplamders.TabIndex = 1;
-            this.lbltoplamders.Text = "label14";
-            // 
-            // lblpuanprogress
-            // 
-            this.lblpuanprogress.AutoSize = true;
-            this.lblpuanprogress.Location = new System.Drawing.Point(16, 89);
-            this.lblpuanprogress.Name = "lblpuanprogress";
-            this.lblpuanprogress.Size = new System.Drawing.Size(54, 17);
-            this.lblpuanprogress.TabIndex = 2;
-            this.lblpuanprogress.Text = "label15";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.progressBar1.Location = new System.Drawing.Point(93, 83);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(200, 23);
-            this.progressBar1.TabIndex = 3;
             // 
             // frmdersprogrami
             // 
