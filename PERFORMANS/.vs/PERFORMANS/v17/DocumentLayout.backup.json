@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\performans\\performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\performans\\performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmdersprogrami.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\performans\\performans\\frmanaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmanaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\performans\\performans\\frmogrtgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmogrtgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|c:\\users\\pc\\desktop\\ceng\u0130z\\c#andsql\\performans\\performans\\frmogrtgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\performans\\frmogrtgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmogrtgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\performans\\frmogrtgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|solutionrelative:performans\\frmogrtgiris.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83D098E2-36DC-4B8B-993C-211E5E4AF97F}|PERFORMANS\\PERFORMANS.csproj|C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\performans\\baglantisinif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,19 +58,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmdersprogrami.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
-              "RelativeDocumentMoniker": "PERFORMANS\\frmdersprogrami.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs [Design]",
-              "RelativeToolTip": "PERFORMANS\\frmdersprogrami.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "frmanaform.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmanaform.cs",
+              "RelativeDocumentMoniker": "PERFORMANS\\frmanaform.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmanaform.cs [Design]",
+              "RelativeToolTip": "PERFORMANS\\frmanaform.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T08:53:18.445Z",
+              "WhenOpened": "2025-10-07T10:44:03.37Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmogrtgiris.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmogrtgiris.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmogrtgiris.cs",
@@ -91,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "baglantisinif.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\baglantisinif.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\baglantisinif.cs",
@@ -99,21 +103,32 @@
               "RelativeToolTip": "PERFORMANS\\baglantisinif.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T07:58:01.379Z",
+              "WhenOpened": "2025-10-06T07:58:01.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmdersprogrami.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
+              "RelativeDocumentMoniker": "PERFORMANS\\frmdersprogrami.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs*",
+              "RelativeToolTip": "PERFORMANS\\frmdersprogrami.cs*",
+              "ViewState": "AgIAAKUFAAAAAAAAAAAQwLYFAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T13:44:43.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmdersprogrami.cs",
+              "Title": "frmdersprogrami.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
               "RelativeDocumentMoniker": "PERFORMANS\\frmdersprogrami.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs",
-              "RelativeToolTip": "PERFORMANS\\frmdersprogrami.cs",
-              "ViewState": "AgIAAF4FAAAAAAAAAAAAAJ4FAAAeAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\CENG\u0130Z\\C#ANDSQL\\PERFORMANS\\PERFORMANS\\frmdersprogrami.cs [Design]*",
+              "RelativeToolTip": "PERFORMANS\\frmdersprogrami.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T13:44:43.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T08:53:18.445Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

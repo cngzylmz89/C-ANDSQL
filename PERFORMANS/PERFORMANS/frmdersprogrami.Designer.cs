@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -89,14 +87,24 @@
             this.lbltoplamders = new System.Windows.Forms.Label();
             this.lblpuansizders = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdygunluk = new System.Windows.Forms.RadioButton();
+            this.rdyhaftalik = new System.Windows.Forms.RadioButton();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pckhand = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -109,6 +117,18 @@
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.Panel2.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pckhand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -146,43 +166,6 @@
             this.panel2.Size = new System.Drawing.Size(1060, 107);
             this.panel2.TabIndex = 4;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::PERFORMANS.Properties.Resources.icons8_close_40px;
-            this.pictureBox5.Location = new System.Drawing.Point(973, 12);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 41);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::PERFORMANS.Properties.Resources.bayrak;
-            this.pictureBox4.Location = new System.Drawing.Point(9, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(74, 68);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::PERFORMANS.Properties.Resources.ÖĞRENCİ_PERFORMANS_PROGRAMI;
-            this.pictureBox1.Location = new System.Drawing.Point(254, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -201,7 +184,7 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.OrangeRed;
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer4);
             this.splitContainer2.Size = new System.Drawing.Size(1060, 438);
-            this.splitContainer2.SplitterDistance = 682;
+            this.splitContainer2.SplitterDistance = 683;
             this.splitContainer2.SplitterWidth = 3;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -216,7 +199,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer3.Size = new System.Drawing.Size(682, 438);
+            this.splitContainer3.Size = new System.Drawing.Size(683, 438);
             this.splitContainer3.SplitterDistance = 42;
             this.splitContainer3.SplitterWidth = 3;
             this.splitContainer3.TabIndex = 0;
@@ -291,7 +274,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(682, 393);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(683, 393);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -359,7 +342,7 @@
             this.label5.Location = new System.Drawing.Point(564, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 61);
+            this.label5.Size = new System.Drawing.Size(117, 61);
             this.label5.TabIndex = 4;
             this.label5.Text = "CUMA";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -805,7 +788,7 @@
             this.btnfriday1.Location = new System.Drawing.Point(564, 63);
             this.btnfriday1.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday1.Name = "btnfriday1";
-            this.btnfriday1.Size = new System.Drawing.Size(116, 43);
+            this.btnfriday1.Size = new System.Drawing.Size(117, 43);
             this.btnfriday1.TabIndex = 40;
             this.btnfriday1.Text = "  ";
             this.btnfriday1.UseVisualStyleBackColor = true;
@@ -817,7 +800,7 @@
             this.btnfriday2.Location = new System.Drawing.Point(564, 110);
             this.btnfriday2.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday2.Name = "btnfriday2";
-            this.btnfriday2.Size = new System.Drawing.Size(116, 43);
+            this.btnfriday2.Size = new System.Drawing.Size(117, 43);
             this.btnfriday2.TabIndex = 41;
             this.btnfriday2.Text = "  ";
             this.btnfriday2.UseVisualStyleBackColor = true;
@@ -829,7 +812,7 @@
             this.btnfriday3.Location = new System.Drawing.Point(564, 157);
             this.btnfriday3.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday3.Name = "btnfriday3";
-            this.btnfriday3.Size = new System.Drawing.Size(116, 43);
+            this.btnfriday3.Size = new System.Drawing.Size(117, 43);
             this.btnfriday3.TabIndex = 42;
             this.btnfriday3.Text = "  ";
             this.btnfriday3.UseVisualStyleBackColor = true;
@@ -841,7 +824,7 @@
             this.btnfriday4.Location = new System.Drawing.Point(564, 204);
             this.btnfriday4.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday4.Name = "btnfriday4";
-            this.btnfriday4.Size = new System.Drawing.Size(116, 43);
+            this.btnfriday4.Size = new System.Drawing.Size(117, 43);
             this.btnfriday4.TabIndex = 43;
             this.btnfriday4.Text = "  ";
             this.btnfriday4.UseVisualStyleBackColor = true;
@@ -853,7 +836,7 @@
             this.btnfriday5.Location = new System.Drawing.Point(564, 251);
             this.btnfriday5.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday5.Name = "btnfriday5";
-            this.btnfriday5.Size = new System.Drawing.Size(116, 43);
+            this.btnfriday5.Size = new System.Drawing.Size(117, 43);
             this.btnfriday5.TabIndex = 44;
             this.btnfriday5.Text = "  ";
             this.btnfriday5.UseVisualStyleBackColor = true;
@@ -865,7 +848,7 @@
             this.btnfriday6.Location = new System.Drawing.Point(564, 298);
             this.btnfriday6.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday6.Name = "btnfriday6";
-            this.btnfriday6.Size = new System.Drawing.Size(116, 43);
+            this.btnfriday6.Size = new System.Drawing.Size(117, 43);
             this.btnfriday6.TabIndex = 45;
             this.btnfriday6.Text = "  ";
             this.btnfriday6.UseVisualStyleBackColor = true;
@@ -877,7 +860,7 @@
             this.btnfriday7.Location = new System.Drawing.Point(564, 345);
             this.btnfriday7.Margin = new System.Windows.Forms.Padding(2);
             this.btnfriday7.Name = "btnfriday7";
-            this.btnfriday7.Size = new System.Drawing.Size(116, 46);
+            this.btnfriday7.Size = new System.Drawing.Size(117, 46);
             this.btnfriday7.TabIndex = 46;
             this.btnfriday7.Text = "  ";
             this.btnfriday7.UseVisualStyleBackColor = true;
@@ -891,22 +874,21 @@
             // 
             // splitContainer4.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.progressBar1);
-            this.splitContainer4.Panel1.Controls.Add(this.lblpuanprogress);
-            this.splitContainer4.Panel1.Controls.Add(this.lbltoplamders);
+            this.splitContainer4.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer4.Panel1.Controls.Add(this.lblpuansizders);
             // 
             // splitContainer4.Panel2
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.listBox1);
-            this.splitContainer4.Size = new System.Drawing.Size(375, 438);
+            this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
+            this.splitContainer4.Size = new System.Drawing.Size(374, 438);
             this.splitContainer4.SplitterDistance = 143;
             this.splitContainer4.TabIndex = 0;
             // 
             // progressBar1
             // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.progressBar1.Location = new System.Drawing.Point(93, 83);
+            this.progressBar1.Location = new System.Drawing.Point(114, 71);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(200, 23);
             this.progressBar1.TabIndex = 3;
@@ -914,7 +896,7 @@
             // lblpuanprogress
             // 
             this.lblpuanprogress.AutoSize = true;
-            this.lblpuanprogress.Location = new System.Drawing.Point(16, 89);
+            this.lblpuanprogress.Location = new System.Drawing.Point(16, 36);
             this.lblpuanprogress.Name = "lblpuanprogress";
             this.lblpuanprogress.Size = new System.Drawing.Size(54, 17);
             this.lblpuanprogress.TabIndex = 2;
@@ -923,7 +905,7 @@
             // lbltoplamders
             // 
             this.lbltoplamders.AutoSize = true;
-            this.lbltoplamders.Location = new System.Drawing.Point(16, 45);
+            this.lbltoplamders.Location = new System.Drawing.Point(16, 8);
             this.lbltoplamders.Name = "lbltoplamders";
             this.lbltoplamders.Size = new System.Drawing.Size(54, 17);
             this.lbltoplamders.TabIndex = 1;
@@ -944,8 +926,165 @@
             this.listBox1.ItemHeight = 17;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(375, 291);
+            this.listBox1.Size = new System.Drawing.Size(374, 190);
             this.listBox1.TabIndex = 0;
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer5.Name = "splitContainer5";
+            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.label13);
+            this.splitContainer5.Panel1.Controls.Add(this.progressBar1);
+            this.splitContainer5.Panel1.Controls.Add(this.lblpuanprogress);
+            this.splitContainer5.Panel1.Controls.Add(this.lbltoplamders);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.Controls.Add(this.listBox1);
+            this.splitContainer5.Size = new System.Drawing.Size(374, 291);
+            this.splitContainer5.SplitterDistance = 97;
+            this.splitContainer5.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(16, 71);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 17);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "label15";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.pictureBox8);
+            this.groupBox1.Controls.Add(this.pictureBox3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(374, 143);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "İŞLEMLER";
+            // 
+            // rdygunluk
+            // 
+            this.rdygunluk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdygunluk.AutoSize = true;
+            this.rdygunluk.Location = new System.Drawing.Point(127, 7);
+            this.rdygunluk.Name = "rdygunluk";
+            this.rdygunluk.Size = new System.Drawing.Size(143, 21);
+            this.rdygunluk.TabIndex = 24;
+            this.rdygunluk.Text = "GÜNLÜK PUANLA";
+            this.rdygunluk.UseVisualStyleBackColor = true;
+            // 
+            // rdyhaftalik
+            // 
+            this.rdyhaftalik.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdyhaftalik.AutoSize = true;
+            this.rdyhaftalik.Location = new System.Drawing.Point(127, 36);
+            this.rdyhaftalik.Name = "rdyhaftalik";
+            this.rdyhaftalik.Size = new System.Drawing.Size(150, 21);
+            this.rdyhaftalik.TabIndex = 25;
+            this.rdyhaftalik.Text = "HAFTALIK PUANLA";
+            this.rdyhaftalik.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::PERFORMANS.Properties.Resources.icons8_close_40px;
+            this.pictureBox5.Location = new System.Drawing.Point(973, 12);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 41);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::PERFORMANS.Properties.Resources.bayrak;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(74, 68);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::PERFORMANS.Properties.Resources.ÖĞRENCİ_PERFORMANS_PROGRAMI;
+            this.pictureBox1.Location = new System.Drawing.Point(254, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pckhand
+            // 
+            this.pckhand.Image = global::PERFORMANS.Properties.Resources.icons8_hand_right_skin_type_1_48px;
+            this.pckhand.Location = new System.Drawing.Point(18, 20);
+            this.pckhand.Name = "pckhand";
+            this.pckhand.Size = new System.Drawing.Size(73, 50);
+            this.pckhand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pckhand.TabIndex = 26;
+            this.pckhand.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = global::PERFORMANS.Properties.Resources.icons8_increase_48px;
+            this.pictureBox8.Location = new System.Drawing.Point(240, 22);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::PERFORMANS.Properties.Resources.icons8_settings_100px;
+            this.pictureBox3.Location = new System.Drawing.Point(314, 10);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(54, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.rdygunluk);
+            this.groupBox2.Controls.Add(this.pckhand);
+            this.groupBox2.Controls.Add(this.rdyhaftalik);
+            this.groupBox2.Location = new System.Drawing.Point(63, 70);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(308, 67);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
             // 
             // frmdersprogrami
             // 
@@ -965,9 +1104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -982,6 +1118,20 @@
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
+            this.splitContainer5.Panel1.ResumeLayout(false);
+            this.splitContainer5.Panel1.PerformLayout();
+            this.splitContainer5.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
+            this.splitContainer5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pckhand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1049,5 +1199,15 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblpuanprogress;
         private System.Windows.Forms.Label lbltoplamders;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.SplitContainer splitContainer5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pckhand;
+        private System.Windows.Forms.RadioButton rdygunluk;
+        private System.Windows.Forms.RadioButton rdyhaftalik;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

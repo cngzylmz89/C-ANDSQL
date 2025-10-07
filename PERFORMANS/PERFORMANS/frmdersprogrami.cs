@@ -1440,6 +1440,7 @@ namespace PERFORMANS
                 }
             }
             con.Close();
+            timer1.Start();
         }
         private void frmdersprogrami_Load(object sender, EventArgs e)
         {
@@ -1454,6 +1455,13 @@ namespace PERFORMANS
             
         }
 
-       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pckhand.Left = -10;
+            while (pckhand.Left <= -10)
+            {
+                pckhand.Left = pckhand.Left + 10;
+            }
+        }
     }
 }

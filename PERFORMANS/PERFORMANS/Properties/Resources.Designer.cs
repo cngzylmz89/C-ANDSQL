@@ -163,6 +163,16 @@ namespace PERFORMANS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_hand_right_skin_type_1_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_hand_right_skin_type_1_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_increase_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_increase_48px", resourceCulture);
@@ -256,6 +266,16 @@ namespace PERFORMANS.Properties {
         internal static System.Drawing.Bitmap seskapat {
             get {
                 object obj = ResourceManager.GetObject("seskapat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sticker_png_emojis_hand_icon {
+            get {
+                object obj = ResourceManager.GetObject("sticker-png-emojis-hand-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -226,7 +226,7 @@
             this.lbladbrans.AutoSize = true;
             this.lbladbrans.Location = new System.Drawing.Point(38, 100);
             this.lbladbrans.Name = "lbladbrans";
-            this.lbladbrans.Size = new System.Drawing.Size(58, 24);
+            this.lbladbrans.Size = new System.Drawing.Size(48, 18);
             this.lbladbrans.TabIndex = 6;
             this.lbladbrans.Text = "label1";
             // 
@@ -278,7 +278,7 @@
             this.chkhesapla.ForeColor = System.Drawing.Color.Black;
             this.chkhesapla.Location = new System.Drawing.Point(29, 47);
             this.chkhesapla.Name = "chkhesapla";
-            this.chkhesapla.Size = new System.Drawing.Size(334, 19);
+            this.chkhesapla.Size = new System.Drawing.Size(287, 17);
             this.chkhesapla.TabIndex = 19;
             this.chkhesapla.Text = "HAFTALIK PUAN SIRALAMASINI ANINDA GÖR";
             this.chkhesapla.UseVisualStyleBackColor = true;
@@ -293,7 +293,7 @@
             this.chkpuangor.ForeColor = System.Drawing.Color.Black;
             this.chkpuangor.Location = new System.Drawing.Point(29, 22);
             this.chkpuangor.Name = "chkpuangor";
-            this.chkpuangor.Size = new System.Drawing.Size(224, 19);
+            this.chkpuangor.Size = new System.Drawing.Size(193, 17);
             this.chkpuangor.TabIndex = 18;
             this.chkpuangor.Text = "PUAN SIRALAMASINI  KAPAT";
             this.chkpuangor.UseVisualStyleBackColor = true;
@@ -330,11 +330,11 @@
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 21);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 17);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(397, 563);
+            this.dataGridView2.Size = new System.Drawing.Size(397, 567);
             this.dataGridView2.TabIndex = 0;
             // 
             // groupBox10
@@ -589,7 +589,7 @@
             this.label15.ForeColor = System.Drawing.SystemColors.Control;
             this.label15.Location = new System.Drawing.Point(3, 254);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 67);
+            this.label15.Size = new System.Drawing.Size(32, 67);
             this.label15.TabIndex = 15;
             this.label15.Text = "6-";
             // 
@@ -601,9 +601,9 @@
             this.lblbes.AutoSize = true;
             this.lblbes.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblbes.ForeColor = System.Drawing.Color.White;
-            this.lblbes.Location = new System.Drawing.Point(49, 203);
+            this.lblbes.Location = new System.Drawing.Point(41, 203);
             this.lblbes.Name = "lblbes";
-            this.lblbes.Size = new System.Drawing.Size(691, 51);
+            this.lblbes.Size = new System.Drawing.Size(699, 51);
             this.lblbes.TabIndex = 14;
             this.lblbes.Text = "label16";
             this.lblbes.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -616,9 +616,9 @@
             this.lbldort.AutoSize = true;
             this.lbldort.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbldort.ForeColor = System.Drawing.Color.White;
-            this.lbldort.Location = new System.Drawing.Point(49, 150);
+            this.lbldort.Location = new System.Drawing.Point(41, 150);
             this.lbldort.Name = "lbldort";
-            this.lbldort.Size = new System.Drawing.Size(691, 53);
+            this.lbldort.Size = new System.Drawing.Size(699, 53);
             this.lbldort.TabIndex = 13;
             this.lbldort.Text = "label15";
             this.lbldort.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -631,9 +631,9 @@
             this.lbluc.AutoSize = true;
             this.lbluc.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbluc.ForeColor = System.Drawing.Color.White;
-            this.lbluc.Location = new System.Drawing.Point(49, 97);
+            this.lbluc.Location = new System.Drawing.Point(41, 97);
             this.lbluc.Name = "lbluc";
-            this.lbluc.Size = new System.Drawing.Size(691, 53);
+            this.lbluc.Size = new System.Drawing.Size(699, 53);
             this.lbluc.TabIndex = 12;
             this.lbluc.Text = "label14";
             this.lbluc.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -647,7 +647,7 @@
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
             this.label11.Location = new System.Drawing.Point(3, 203);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 51);
+            this.label11.Size = new System.Drawing.Size(32, 51);
             this.label11.TabIndex = 4;
             this.label11.Text = "5-";
             // 
@@ -660,7 +660,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 46);
+            this.label7.Size = new System.Drawing.Size(32, 46);
             this.label7.TabIndex = 0;
             this.label7.Text = "1-";
             // 
@@ -673,7 +673,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
             this.label10.Location = new System.Drawing.Point(3, 150);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 53);
+            this.label10.Size = new System.Drawing.Size(32, 53);
             this.label10.TabIndex = 3;
             this.label10.Text = "4-";
             // 
@@ -686,7 +686,7 @@
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Location = new System.Drawing.Point(3, 46);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 51);
+            this.label8.Size = new System.Drawing.Size(32, 51);
             this.label8.TabIndex = 1;
             this.label8.Text = "2-";
             // 
@@ -699,7 +699,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Location = new System.Drawing.Point(3, 97);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 53);
+            this.label9.Size = new System.Drawing.Size(32, 53);
             this.label9.TabIndex = 2;
             this.label9.Text = "3-";
             // 
@@ -711,9 +711,9 @@
             this.lblbir.AutoSize = true;
             this.lblbir.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblbir.ForeColor = System.Drawing.Color.White;
-            this.lblbir.Location = new System.Drawing.Point(49, 0);
+            this.lblbir.Location = new System.Drawing.Point(41, 0);
             this.lblbir.Name = "lblbir";
-            this.lblbir.Size = new System.Drawing.Size(691, 46);
+            this.lblbir.Size = new System.Drawing.Size(699, 46);
             this.lblbir.TabIndex = 10;
             this.lblbir.Text = "label12";
             this.lblbir.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -726,9 +726,9 @@
             this.lbliki.AutoSize = true;
             this.lbliki.Font = new System.Drawing.Font("Corbel", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbliki.ForeColor = System.Drawing.Color.White;
-            this.lbliki.Location = new System.Drawing.Point(49, 46);
+            this.lbliki.Location = new System.Drawing.Point(41, 46);
             this.lbliki.Name = "lbliki";
-            this.lbliki.Size = new System.Drawing.Size(691, 51);
+            this.lbliki.Size = new System.Drawing.Size(699, 51);
             this.lbliki.TabIndex = 11;
             this.lbliki.Text = "label13";
             this.lbliki.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -739,9 +739,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rchnotdus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rchnotdus.ForeColor = System.Drawing.Color.Black;
-            this.rchnotdus.Location = new System.Drawing.Point(49, 257);
+            this.rchnotdus.Location = new System.Drawing.Point(41, 257);
             this.rchnotdus.Name = "rchnotdus";
-            this.rchnotdus.Size = new System.Drawing.Size(691, 61);
+            this.rchnotdus.Size = new System.Drawing.Size(699, 61);
             this.rchnotdus.TabIndex = 16;
             this.rchnotdus.Text = "";
             // 
@@ -804,7 +804,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(6, 20);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(132, 24);
+            this.label13.Size = new System.Drawing.Size(109, 18);
             this.label13.TabIndex = 18;
             this.label13.Text = "ÖĞRENCİ İD:";
             // 
@@ -813,7 +813,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 24);
+            this.label3.Size = new System.Drawing.Size(107, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "ADI SOYADI:";
             // 
@@ -822,7 +822,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 96);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 24);
+            this.label5.Size = new System.Drawing.Size(100, 18);
             this.label5.TabIndex = 8;
             this.label5.Text = "NUMARASI:";
             // 
@@ -831,7 +831,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 24);
+            this.label4.Size = new System.Drawing.Size(134, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "TOPLAM PUANI:";
             // 
@@ -842,7 +842,7 @@
             this.lblogrenciid.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblogrenciid.Location = new System.Drawing.Point(185, 18);
             this.lblogrenciid.Name = "lblogrenciid";
-            this.lblogrenciid.Size = new System.Drawing.Size(0, 24);
+            this.lblogrenciid.Size = new System.Drawing.Size(0, 18);
             this.lblogrenciid.TabIndex = 19;
             // 
             // dateTimePicker1
@@ -850,7 +850,7 @@
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(10, 166);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(320, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(320, 25);
             this.dateTimePicker1.TabIndex = 12;
             // 
             // label6
@@ -858,7 +858,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(16, 199);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 24);
+            this.label6.Size = new System.Drawing.Size(111, 18);
             this.label6.TabIndex = 13;
             this.label6.Text = "DERS SAYISI:";
             // 
@@ -869,7 +869,7 @@
             this.lblogrenciadsoyad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblogrenciadsoyad.Location = new System.Drawing.Point(185, 56);
             this.lblogrenciadsoyad.Name = "lblogrenciadsoyad";
-            this.lblogrenciadsoyad.Size = new System.Drawing.Size(0, 24);
+            this.lblogrenciadsoyad.Size = new System.Drawing.Size(0, 18);
             this.lblogrenciadsoyad.TabIndex = 14;
             // 
             // lbltoplamderssayisi
@@ -879,7 +879,7 @@
             this.lbltoplamderssayisi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbltoplamderssayisi.Location = new System.Drawing.Point(189, 199);
             this.lbltoplamderssayisi.Name = "lbltoplamderssayisi";
-            this.lbltoplamderssayisi.Size = new System.Drawing.Size(0, 24);
+            this.lbltoplamderssayisi.Size = new System.Drawing.Size(0, 18);
             this.lbltoplamderssayisi.TabIndex = 17;
             // 
             // lblogrencinumara
@@ -889,7 +889,7 @@
             this.lblogrencinumara.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblogrencinumara.Location = new System.Drawing.Point(185, 94);
             this.lblogrencinumara.Name = "lblogrencinumara";
-            this.lblogrencinumara.Size = new System.Drawing.Size(0, 24);
+            this.lblogrencinumara.Size = new System.Drawing.Size(0, 18);
             this.lblogrencinumara.TabIndex = 15;
             // 
             // lblogrencitoplampuan
@@ -899,7 +899,7 @@
             this.lblogrencitoplampuan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblogrencitoplampuan.Location = new System.Drawing.Point(209, 132);
             this.lblogrencitoplampuan.Name = "lblogrencitoplampuan";
-            this.lblogrencitoplampuan.Size = new System.Drawing.Size(0, 24);
+            this.lblogrencitoplampuan.Size = new System.Drawing.Size(0, 18);
             this.lblogrencitoplampuan.TabIndex = 16;
             // 
             // groupBox9
@@ -922,7 +922,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(-3, 25);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 24);
+            this.label14.Size = new System.Drawing.Size(57, 18);
             this.label14.TabIndex = 21;
             this.label14.Text = "SINIF:";
             // 
@@ -931,7 +931,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(-3, 63);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(128, 24);
+            this.label17.Size = new System.Drawing.Size(106, 18);
             this.label17.TabIndex = 25;
             this.label17.Text = "DERS SAATİ:";
             // 
@@ -944,7 +944,7 @@
             this.cmbsınıfsec.FormattingEnabled = true;
             this.cmbsınıfsec.Location = new System.Drawing.Point(221, 22);
             this.cmbsınıfsec.Name = "cmbsınıfsec";
-            this.cmbsınıfsec.Size = new System.Drawing.Size(243, 35);
+            this.cmbsınıfsec.Size = new System.Drawing.Size(243, 29);
             this.cmbsınıfsec.TabIndex = 1;
             this.cmbsınıfsec.SelectedIndexChanged += new System.EventHandler(this.cmbsınıfsec_SelectedIndexChanged);
             // 
@@ -956,7 +956,7 @@
             this.cmbderssaati.FormattingEnabled = true;
             this.cmbderssaati.Location = new System.Drawing.Point(221, 71);
             this.cmbderssaati.Name = "cmbderssaati";
-            this.cmbderssaati.Size = new System.Drawing.Size(243, 35);
+            this.cmbderssaati.Size = new System.Drawing.Size(243, 29);
             this.cmbderssaati.TabIndex = 2;
             this.cmbderssaati.SelectedIndexChanged += new System.EventHandler(this.cmbderssaati_SelectedIndexChanged);
             // 
@@ -965,7 +965,7 @@
             this.lbldersadi.AutoSize = true;
             this.lbldersadi.Location = new System.Drawing.Point(6, 98);
             this.lbldersadi.Name = "lbldersadi";
-            this.lbldersadi.Size = new System.Drawing.Size(0, 24);
+            this.lbldersadi.Size = new System.Drawing.Size(0, 18);
             this.lbldersadi.TabIndex = 22;
             // 
             // lblrol
@@ -1127,7 +1127,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(141, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 24);
+            this.label2.Size = new System.Drawing.Size(127, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "İSTATİSTİKLER";
             // 
@@ -1137,7 +1137,7 @@
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(-4, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.Size = new System.Drawing.Size(113, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "ÖLÇÜT AYARLA";
             // 
@@ -1194,9 +1194,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 21);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(275, 186);
+            this.pictureBox2.Size = new System.Drawing.Size(275, 191);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -1206,7 +1206,7 @@
             this.lblders.AutoSize = true;
             this.lblders.Location = new System.Drawing.Point(432, 100);
             this.lblders.Name = "lblders";
-            this.lblders.Size = new System.Drawing.Size(58, 24);
+            this.lblders.Size = new System.Drawing.Size(48, 18);
             this.lblders.TabIndex = 7;
             this.lblders.Text = "label1";
             // 
@@ -1215,7 +1215,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(634, 106);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 24);
+            this.label12.Size = new System.Drawing.Size(56, 18);
             this.label12.TabIndex = 19;
             this.label12.Text = "label12";
             this.label12.Visible = false;
@@ -1225,7 +1225,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(634, 106);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 24);
+            this.label16.Size = new System.Drawing.Size(56, 18);
             this.label16.TabIndex = 20;
             this.label16.Text = "label16";
             this.label16.Visible = false;
@@ -1235,7 +1235,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(634, 100);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 24);
+            this.label18.Size = new System.Drawing.Size(56, 18);
             this.label18.TabIndex = 21;
             this.label18.Text = "label18";
             this.label18.Visible = false;
@@ -1247,7 +1247,7 @@
             this.rdygunluk.AutoSize = true;
             this.rdygunluk.Location = new System.Drawing.Point(60, 5);
             this.rdygunluk.Name = "rdygunluk";
-            this.rdygunluk.Size = new System.Drawing.Size(205, 28);
+            this.rdygunluk.Size = new System.Drawing.Size(168, 22);
             this.rdygunluk.TabIndex = 22;
             this.rdygunluk.Text = "GÜNLÜK PUANLA";
             this.rdygunluk.UseVisualStyleBackColor = true;
@@ -1259,7 +1259,7 @@
             this.rdyhaftalik.AutoSize = true;
             this.rdyhaftalik.Location = new System.Drawing.Point(451, 5);
             this.rdyhaftalik.Name = "rdyhaftalik";
-            this.rdyhaftalik.Size = new System.Drawing.Size(219, 28);
+            this.rdyhaftalik.Size = new System.Drawing.Size(179, 22);
             this.rdyhaftalik.TabIndex = 23;
             this.rdyhaftalik.Text = "HAFTALIK PUANLA";
             this.rdyhaftalik.UseVisualStyleBackColor = true;
@@ -1277,7 +1277,7 @@
             // 
             // frmanaform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

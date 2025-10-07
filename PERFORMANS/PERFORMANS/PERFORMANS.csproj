@@ -332,6 +332,8 @@
     <Content Include="PERFORMANSISTEMI_be_be.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\sticker-png-emojis-hand-icon.png" />
+    <None Include="Resources\icons8_hand_right_skin_type_1_48px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
