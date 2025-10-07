@@ -45,10 +45,10 @@ namespace PERFORMANS
             OleDbDataReader rd = komutgiris.ExecuteReader();
             if (rd.Read())
             {
-                frmanaform frmanaform = new frmanaform();
-                frmanaform.tc = msktc.Text;
-                frmanaform.rol = "ogretmen";
-                frmanaform.Show();
+                //frmanaform frmanaform = new frmanaform();
+                //frmanaform.tc = msktc.Text;
+                //frmanaform.rol = "ogretmen";
+                //frmanaform.Show();
 
                 frmdersprogrami frmdersprogrami = new frmdersprogrami();
                 frmdersprogrami.ogretmentc = msktc.Text;
