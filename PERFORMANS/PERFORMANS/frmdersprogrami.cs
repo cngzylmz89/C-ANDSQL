@@ -1440,6 +1440,22 @@ namespace PERFORMANS
                 }
             }
             con.Close();
+
+            con.Open();
+            OleDbCommand adbransoku = new OleDbCommand("select OGRETMENID,ADISOYADI, BRANS, BRANSI FROM TBLOGRETMENLER where TCKIMLIKNO=@O1", con);
+            adbransoku.Parameters.AddWithValue("@O1", sifrele(ogretmentc));
+            OleDbDataReader rd = adbransoku.ExecuteReader();
+            while (rd.Read())
+            {
+
+                lbladbrans.Text = ("SAYIN " + rd[1] + " HOŞGELDİNİZ.").ToUpper();
+                
+
+            }
+            con.Close();
+            lblbilgilendirme.Text="-->Puanlama şeklini seçtikten sonra puanlama yapmak isteğiniz derse tıklayınız.";
+            lblbilgi2.Text = "-->Yeşil renkli butonlar puanlanmış, turuncu renkli butonlar puanlanmamış dersleri gösterir.";
+            lblbilgi3.Text= "-->Günlük puanlama sadece seçilen dersi, haftalık puanlama hafta içinde sınıfın seçilen dersteki puanlanmamış bütün derslerini puanlar.";
             timer1.Start();
         }
         private void frmdersprogrami_Load(object sender, EventArgs e)
@@ -1457,10 +1473,11 @@ namespace PERFORMANS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pckhand.Left = -10;
-            while (pckhand.Left <= -10)
+
+            pckhand.Left += 1;
+            if (pckhand.Left > 10)
             {
-                pckhand.Left = pckhand.Left + 10;
+                pckhand.Left = 0;
             }
         }
     }

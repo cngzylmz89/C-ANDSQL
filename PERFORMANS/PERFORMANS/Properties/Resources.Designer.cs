@@ -163,9 +163,15 @@ namespace PERFORMANS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap icons8_hand_right_skin_type_1_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_hand_right_skin_type_1_48px", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap icons8_hand_right_100px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_hand_right_100px_1", resourceCulture);
+>>>>>>> 8e2edf966bc2ed06c79887dc2900e8218b15d1bc
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
