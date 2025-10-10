@@ -484,7 +484,7 @@
             // 
             this.cmbogretmen.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbogretmen.FormattingEnabled = true;
-            this.cmbogretmen.Location = new System.Drawing.Point(892, 37);
+            this.cmbogretmen.Location = new System.Drawing.Point(892, 33);
             this.cmbogretmen.Margin = new System.Windows.Forms.Padding(4);
             this.cmbogretmen.Name = "cmbogretmen";
             this.cmbogretmen.Size = new System.Drawing.Size(217, 28);
@@ -494,7 +494,7 @@
             // 
             this.cmbgun.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbgun.FormattingEnabled = true;
-            this.cmbgun.Location = new System.Drawing.Point(4, 37);
+            this.cmbgun.Location = new System.Drawing.Point(4, 33);
             this.cmbgun.Margin = new System.Windows.Forms.Padding(4);
             this.cmbgun.Name = "cmbgun";
             this.cmbgun.Size = new System.Drawing.Size(214, 28);
@@ -504,7 +504,7 @@
             // 
             this.cmbsinif.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbsinif.FormattingEnabled = true;
-            this.cmbsinif.Location = new System.Drawing.Point(226, 37);
+            this.cmbsinif.Location = new System.Drawing.Point(226, 33);
             this.cmbsinif.Margin = new System.Windows.Forms.Padding(4);
             this.cmbsinif.Name = "cmbsinif";
             this.cmbsinif.Size = new System.Drawing.Size(214, 28);
@@ -514,7 +514,7 @@
             // 
             this.cmbderssaati.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbderssaati.FormattingEnabled = true;
-            this.cmbderssaati.Location = new System.Drawing.Point(448, 37);
+            this.cmbderssaati.Location = new System.Drawing.Point(448, 33);
             this.cmbderssaati.Margin = new System.Windows.Forms.Padding(4);
             this.cmbderssaati.Name = "cmbderssaati";
             this.cmbderssaati.Size = new System.Drawing.Size(214, 28);
@@ -524,7 +524,7 @@
             // 
             this.cmbders.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbders.FormattingEnabled = true;
-            this.cmbders.Location = new System.Drawing.Point(670, 37);
+            this.cmbders.Location = new System.Drawing.Point(670, 33);
             this.cmbders.Margin = new System.Windows.Forms.Padding(4);
             this.cmbders.Name = "cmbders";
             this.cmbders.Size = new System.Drawing.Size(214, 28);

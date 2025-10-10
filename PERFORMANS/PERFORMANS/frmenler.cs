@@ -6,6 +6,7 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -54,6 +55,7 @@ namespace PERFORMANS
         }
         public int haftaal(DateTime dtPassed)
         {
+
             CultureInfo ciCurr = CultureInfo.CurrentCulture;
             int weekNum = ciCurr.Calendar.GetWeekOfYear(dtPassed, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
             return weekNum;
@@ -100,9 +102,9 @@ namespace PERFORMANS
             }
 
             con.Close();
-            //birinci olcut haftanin birinci ogrencisi
+            //haftanın ikinci öğrencisi ogrencisi
             con.Open();
-            OleDbCommand komuthaf1olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) DESC", con);
+            OleDbCommand komuthaf1olcut = new OleDbCommand("SELECT    TOP 2 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
             komuthaf1olcut.Parameters.AddWithValue("@H1", hafta);
             OleDbDataReader komuthafbirolcutrd = komuthaf1olcut.ExecuteReader();
             while (komuthafbirolcutrd.Read())
@@ -120,9 +122,9 @@ namespace PERFORMANS
 
             }
             con.Close();
-            //2. ölçüt haftanın en iyi öğrencisi
+            //haftanın üçüncü öğrencisi
             con.Open();
-            OleDbCommand komuthaf2olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) DESC", con);
+            OleDbCommand komuthaf2olcut = new OleDbCommand("SELECT    TOP 3 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
             komuthaf2olcut.Parameters.AddWithValue("@H1", hafta);
             OleDbDataReader komuthafikiolcutrd = komuthaf2olcut.ExecuteReader();
             while (komuthafikiolcutrd.Read())
@@ -141,9 +143,9 @@ namespace PERFORMANS
             }
             con.Close();
 
-            //3. ölçüt haftanın en iyi öğrencisi
+            //haftanın dördüncü  öğrencisi
             con.Open();
-            OleDbCommand komuthaf3olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) DESC", con);
+            OleDbCommand komuthaf3olcut = new OleDbCommand("SELECT    TOP 4 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
             komuthaf3olcut.Parameters.AddWithValue("@H1", hafta);
             OleDbDataReader komuthafucolcutrd = komuthaf3olcut.ExecuteReader();
             while (komuthafucolcutrd.Read())
@@ -162,9 +164,9 @@ namespace PERFORMANS
             }
             con.Close();
 
-            //4. ölçüt haftanın en iyi öğrencisi
+            //haftanın beşinci  öğrencisi
             con.Open();
-            OleDbCommand komuthaf4olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) DESC", con);
+            OleDbCommand komuthaf4olcut = new OleDbCommand("SELECT    TOP 5 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
             komuthaf4olcut.Parameters.AddWithValue("@H1", hafta);
             OleDbDataReader komuthafdortolcutrd = komuthaf4olcut.ExecuteReader();
             while (komuthafdortolcutrd.Read())
@@ -182,9 +184,9 @@ namespace PERFORMANS
 
             }
             con.Close();
-            //5. ölçüt haftanın en iyi öğrencisi
+            //haftanın 6. öğrencisi
             con.Open();
-            OleDbCommand komuthaf5olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) DESC", con);
+            OleDbCommand komuthaf5olcut = new OleDbCommand("SELECT    TOP 6 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
             komuthaf5olcut.Parameters.AddWithValue("@H1", hafta);
             OleDbDataReader komuthafbesolcutrd = komuthaf5olcut.ExecuteReader();
             while (komuthafbesolcutrd.Read())
@@ -203,16 +205,16 @@ namespace PERFORMANS
             }
             con.Close();
         }
-        void haftaninenkotuleri()
+        void donemineniyileri()
         {
             int hafta = haftaal(DateTime.Now);
             //groupBox2.Text = hafta + ". HAFTANIN EN DÜŞÜK PUANLI ÖĞRENCİLERİ";
             OleDbConnection con = new OleDbConnection(conn.baglan);
 
-            //HAFTANIN BİRİNCİ ÖĞRENCİSİ
+            //dönemin birinci öğrencisi
             con.Open();
-            OleDbCommand komuttopogrenciid = new OleDbCommand("select TOP 1 OGRENCININID,  SUM(TOPLAMPUAN) FROM TBLNOTLAR WHERE HAFTA=@P1  GROUP BY OGRENCININID ORDER BY SUM(TOPLAMPUAN) ASC", con);
-            komuttopogrenciid.Parameters.AddWithValue("@P1", hafta);
+            OleDbCommand komuttopogrenciid = new OleDbCommand("select TOP 1 OGRENCININID,  SUM(TOPLAMPUAN) FROM TBLNOTLAR   GROUP BY OGRENCININID ORDER BY SUM(TOPLAMPUAN) DESC", con);
+            
             OleDbDataReader rd1 = komuttopogrenciid.ExecuteReader();
             while (rd1.Read())
             {
@@ -231,10 +233,10 @@ namespace PERFORMANS
             }
             con.Close();
 
-            //haftanın birinci sinifi
+            //dönemin birinci sınıfı
             con.Open();
-            OleDbCommand komuttopsinif = new OleDbCommand("select TOP 1 SINIFAD, SUM(TOPLAMPUAN) FROM TBLNOTLAR INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLNOTLAR.SINIF  WHERE HAFTA=@H1 GROUP BY SINIFAD ORDER BY SUM(TOPLAMPUAN) ASC", con);
-            komuttopsinif.Parameters.AddWithValue("@H1", hafta);
+            OleDbCommand komuttopsinif = new OleDbCommand("select TOP 1 SINIFAD, SUM(TOPLAMPUAN) FROM TBLNOTLAR INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLNOTLAR.SINIF   GROUP BY SINIFAD ORDER BY SUM(TOPLAMPUAN) DESC", con);
+            
             OleDbDataReader komuttopsinifrd = komuttopsinif.ExecuteReader();
             while (komuttopsinifrd.Read())
             {
@@ -244,10 +246,10 @@ namespace PERFORMANS
             }
 
             con.Close();
-            //birinci olcut haftanin birinci ogrencisi
+            //dönemin ikinci öğrencisi
             con.Open();
-            OleDbCommand komuthaf1olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) ASC", con);
-            komuthaf1olcut.Parameters.AddWithValue("@H1", hafta);
+            OleDbCommand komuthaf1olcut = new OleDbCommand("SELECT    TOP 2 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR  GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
+            
             OleDbDataReader komuthafbirolcutrd = komuthaf1olcut.ExecuteReader();
             while (komuthafbirolcutrd.Read())
             {
@@ -264,9 +266,9 @@ namespace PERFORMANS
 
             }
             con.Close();
-            //2. ölçüt haftanın en iyi öğrencisi
+            //dönemin üçüncü öğrencisi
             con.Open();
-            OleDbCommand komuthaf2olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) ASC", con);
+            OleDbCommand komuthaf2olcut = new OleDbCommand("SELECT    TOP 3 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
             komuthaf2olcut.Parameters.AddWithValue("@H1", hafta);
             OleDbDataReader komuthafikiolcutrd = komuthaf2olcut.ExecuteReader();
             while (komuthafikiolcutrd.Read())
@@ -285,10 +287,10 @@ namespace PERFORMANS
             }
             con.Close();
 
-            //3. ölçüt haftanın en iyi öğrencisi
+            //dönemin dördüncü öğrencisi
             con.Open();
-            OleDbCommand komuthaf3olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) ASC", con);
-            komuthaf3olcut.Parameters.AddWithValue("@H1", hafta);
+            OleDbCommand komuthaf3olcut = new OleDbCommand("SELECT    TOP 4 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR  GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
+           
             OleDbDataReader komuthafucolcutrd = komuthaf3olcut.ExecuteReader();
             while (komuthafucolcutrd.Read())
             {
@@ -306,10 +308,10 @@ namespace PERFORMANS
             }
             con.Close();
 
-            //4. ölçüt haftanın en iyi öğrencisi
+            //dönemin beşinci öğrencisi
             con.Open();
-            OleDbCommand komuthaf4olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) ASC", con);
-            komuthaf4olcut.Parameters.AddWithValue("@H1", hafta);
+            OleDbCommand komuthaf4olcut = new OleDbCommand("SELECT    TOP 5 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR  GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
+            
             OleDbDataReader komuthafdortolcutrd = komuthaf4olcut.ExecuteReader();
             while (komuthafdortolcutrd.Read())
             {
@@ -326,10 +328,10 @@ namespace PERFORMANS
 
             }
             con.Close();
-            //5. ölçüt haftanın en iyi öğrencisi
+            //dönemin altıncı öğrencisi
             con.Open();
-            OleDbCommand komuthaf5olcut = new OleDbCommand("SELECT    TOP 1 OGRENCININID,   SUM([1_OLCUT]) FROM    TBLNOTLAR WHERE    HAFTA = @H1 GROUP BY    OGRENCININID ORDER BY    SUM([1_OLCUT]) ASC", con);
-            komuthaf5olcut.Parameters.AddWithValue("@H1", hafta);
+            OleDbCommand komuthaf5olcut = new OleDbCommand("SELECT    TOP 6 OGRENCININID,   SUM([TOPLAMPUAN]) FROM    TBLNOTLAR  GROUP BY    OGRENCININID ORDER BY    SUM([TOPLAMPUAN]) DESC", con);
+            
             OleDbDataReader komuthafbesolcutrd = komuthaf5olcut.ExecuteReader();
             while (komuthafbesolcutrd.Read())
             {
@@ -349,84 +351,13 @@ namespace PERFORMANS
 
         }
 
-        void donemenleri()
-        {
-            OleDbConnection con = new OleDbConnection(conn.baglan);
-            con.Open();
-            OleDbCommand dontoppuanogr = new OleDbCommand("select TOP 1 OGRENCININID, SUM(TOPLAMPUAN) FROM TBLNOTLAR  GROUP BY OGRENCININID ORDER BY SUM(TOPLAMPUAN) DESC", con);
-            OleDbDataReader rd1= dontoppuanogr.ExecuteReader();
-            while (rd1.Read()) 
-            {
-                topdonogryuk = int.Parse(rd1[0].ToString());
-            }
-
-            con.Close() ;
-
-            con.Open();
-            OleDbCommand dontopogryuk=new OleDbCommand("select OGRENCIADISOYADI, FOTOGRAFYOL FROM TBLOGRENCILER WHERE OGRENCIID="+topdonogryuk, con);
-            OleDbDataReader rd2 = dontopogryuk.ExecuteReader();
-            while (rd2.Read())
-            {
-                pckdontopogryuk.ImageLocation= rd2[1].ToString();
-                lbldontopogryuk.Text=rd2[0].ToString();
-            }
-            con.Close();
-
-            //dönemin en düşük ögrencisi
-
-            
-            con.Open();
-            OleDbCommand dontoppuanogrdus= new OleDbCommand("select TOP 1 OGRENCININID, SUM(TOPLAMPUAN) FROM TBLNOTLAR  GROUP BY OGRENCININID ORDER BY SUM(TOPLAMPUAN) ASC", con);
-            OleDbDataReader rd3 = dontoppuanogrdus.ExecuteReader();
-            while (rd3.Read())
-            {
-                topdonogrdus = int.Parse(rd3[0].ToString());
-            }
-
-            con.Close();
-
-            con.Open();
-            OleDbCommand dontopogrdus = new OleDbCommand("select OGRENCIADISOYADI, FOTOGRAFYOL FROM TBLOGRENCILER WHERE OGRENCIID=" + topdonogrdus, con);
-            OleDbDataReader rd4 = dontopogrdus.ExecuteReader();
-            while (rd4.Read())
-            {
-                pckdontopogrdus.ImageLocation = rd4[1].ToString();
-                lbltopogryuk.Text = rd4[0].ToString();
-            }
-            con.Close();
-
-            //dönemin birinci sinifi
-            con.Open();
-            OleDbCommand komuttopsinif = new OleDbCommand("select TOP 1 SINIFAD, SUM(TOPLAMPUAN) FROM TBLNOTLAR INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLNOTLAR.SINIF   GROUP BY SINIFAD ORDER BY SUM(TOPLAMPUAN) DESC", con);
-            OleDbDataReader komuttopsinifrd = komuttopsinif.ExecuteReader();
-            while (komuttopsinifrd.Read())
-            {
-                label29.Text = (komuttopsinifrd[0].ToString()).ToUpper();
-                label20.Text = "TOPLAM PUAN";
-                lbldontopsinyukpuan.Text = (komuttopsinifrd[1].ToString()).ToUpper();
-            }
-
-            con.Close();
-
-            //dönemin birinci sinifi
-            con.Open();
-            OleDbCommand komuttopsinifdus = new OleDbCommand("select TOP 1 SINIFAD, SUM(TOPLAMPUAN) FROM TBLNOTLAR INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLNOTLAR.SINIF   GROUP BY SINIFAD ORDER BY SUM(TOPLAMPUAN) DESC", con);
-            OleDbDataReader komuttopsinifdusrd = komuttopsinifdus.ExecuteReader();
-            while (komuttopsinifdusrd.Read())
-            {
-                lbldontopsindus.Text = (komuttopsinifdusrd[0].ToString()).ToUpper();
-                label20.Text = "TOPLAM PUAN";
-                lbldonsinduspuan.Text = (komuttopsinifdusrd[1].ToString()).ToUpper();
-            }
-
-            con.Close();
-        }
+       
         private void frmenler_Load(object sender, EventArgs e)
         {
 
             haftanineniyileri();
-            haftaninenkotuleri();
-            donemenleri();
+            donemineniyileri();
+           
 
         }
 

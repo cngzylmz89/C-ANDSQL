@@ -30,5 +30,17 @@ namespace PERFORMANS
             frmogrtgiris.Show();
             this.Hide();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+        
+            MessageBox.Show("Bu program öğrencilerimizin ders içi performanslarını artırmak ve onları motive etmek amacıyla 2025 yılında CENGİZ YILMAZ tarafından yapılmıştır. Bilgi için muallimiturki@gmail.com adresine mesaj atabilirsiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    
     }
 }

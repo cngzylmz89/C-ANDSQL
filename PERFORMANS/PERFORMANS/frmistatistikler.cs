@@ -39,6 +39,7 @@ namespace PERFORMANS
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        public int ogretmennum;
         public int bransnum;
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -254,7 +255,7 @@ namespace PERFORMANS
                 //ÖLÇÜT OKU
                 bransnum = 1;
                 con.Open();
-                OleDbCommand cmdolcutoku = new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC, OLCUTDORT, OLCUTBES FROM TBLOGRETMENLER WHERE BRANS=" + bransnum, con);
+                OleDbCommand cmdolcutoku = new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC, OLCUTDORT, OLCUTBES FROM TBLOGRETMENLER WHERE OGRETMENID=" + ogretmennum, con);
                 OleDbDataReader rd = cmdolcutoku.ExecuteReader();
                 while (rd.Read())
                 {
@@ -273,14 +274,16 @@ namespace PERFORMANS
 
 
                 //combobox sınıf seç
-
-                OleDbDataAdapter da4 = new OleDbDataAdapter("select SINIFID, SINIFAD FROM TBLSINIFLAR", con);
+                con.Open();
+                OleDbCommand komutsinifoku = new OleDbCommand("select DISTINCT(SINIF), SINIFAD FROM TBLDERSPROGRAMI INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF WHERE OGRETMEN=@P1", con);
+                komutsinifoku.Parameters.AddWithValue("@P1", ogretmennum); 
+                OleDbDataAdapter da4 = new OleDbDataAdapter(komutsinifoku);
                 DataTable dt4 = new DataTable();
                 da4.Fill(dt4);
                 cmbsınıfsec.DisplayMember = "SINIFAD";
-                cmbsınıfsec.ValueMember = "SINIFID";
+                cmbsınıfsec.ValueMember = "SINIF";
                 cmbsınıfsec.DataSource = dt4;
-
+                con.Close();
                 //ÖLÇÜT DATAGRID VİEW
 
             }
@@ -292,7 +295,7 @@ namespace PERFORMANS
 
                 //combobox sınıf seç
 
-                OleDbDataAdapter da4 = new OleDbDataAdapter("select SINIFID, SINIFAD FROM TBLSINIFLAR", con);
+                OleDbDataAdapter da4 = new OleDbDataAdapter("select DISTINCT(SINIF), SINIFAD FROM TBLDERSPROGRAMI INNER JOIN TBLSINIFLAR ON TBLSINIFLAR.SINIFID=TBLDERSPROGRAMI.SINIF", con);
                 DataTable dt4 = new DataTable();
                 da4.Fill(dt4);
                 cmbsınıfsec.DisplayMember = "SINIFAD";
@@ -491,8 +494,37 @@ namespace PERFORMANS
 
         private void cmbsınıfsec_SelectedIndexChanged(object sender, EventArgs e)
         {
+            OleDbConnection con=new OleDbConnection(conn.baglan);
+            if (rol == "ogretmen")
+            {
+                con.Open();
+                OleDbCommand komutderssec = new OleDbCommand("select  DISTINCT(DERS), BRANSADI FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID=TBLDERSPROGRAMI.DERS WHERE SINIF=@D1 AND OGRETMEN=@D2", con);
+                komutderssec.Parameters.AddWithValue("@D1", cmbsınıfsec.SelectedValue);
+                komutderssec.Parameters.AddWithValue("@D2", ogretmennum);
+                OleDbDataAdapter da2 = new OleDbDataAdapter(komutderssec);
+                DataTable dt2 = new DataTable();
+                da2.Fill(dt2);
+                cmbderssec.DisplayMember = "BRANSADI";
+                cmbderssec.ValueMember = "DERS";
+                cmbderssec.DataSource = dt2;
+                con.Close();
+            }
+            else if(rol == "yonetici")
+            {
+                con.Open();
+                OleDbCommand komutderssec = new OleDbCommand("select  DISTINCT(DERS), BRANSADI FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID=TBLDERSPROGRAMI.DERS WHERE SINIF=@D1", con);
+                komutderssec.Parameters.AddWithValue("@D1", cmbsınıfsec.SelectedValue);
+                
+                OleDbDataAdapter da2 = new OleDbDataAdapter(komutderssec);
+                DataTable dt2 = new DataTable();
+                da2.Fill(dt2);
+                cmbderssec.DisplayMember = "BRANSADI";
+                cmbderssec.ValueMember = "DERS";
+                cmbderssec.DataSource = dt2;
+                con.Close();
+            }
 
-            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -539,13 +571,22 @@ namespace PERFORMANS
             frmdatagrid2.ucuncuolcut = ucuncuolcut;
             frmdatagrid2.dorduncuolcut = dorduncuolcut;
             frmdatagrid2.besinciolcut = besinciolcut;
-            frmdatagrid2.ders = bransnum;
+            frmdatagrid2.ders = int.Parse(cmbderssec.SelectedValue.ToString());
             frmdatagrid2.sinif = int.Parse(cmbsınıfsec.SelectedValue.ToString());
             frmdatagrid2.sec = 6;
 
             
             frmdatagrid2.Show();
 
+        }
+
+        private void btnsinifdersdonemnottable_Click(object sender, EventArgs e)
+        {
+            frmpuankayitlari frmpuankayitlari=new frmpuankayitlari();
+            frmpuankayitlari.datasec = "puankayitlariders";
+            frmpuankayitlari.brans = int.Parse(cmbderssec.SelectedValue.ToString());
+            frmpuankayitlari.sinif = int.Parse(cmbsınıfsec.SelectedValue.ToString());
+            frmpuankayitlari.Show();
         }
     }
 }

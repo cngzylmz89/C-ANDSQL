@@ -26,6 +26,7 @@ namespace PERFORMANS
         baglantisinif conn = new baglantisinif();
         public string rol;
         int sira = -1;
+        public int gunlukhaftalik;
         public string sifrele(string s)
         {
             byte[] sdizi = ASCIIEncoding.ASCII.GetBytes(s);
@@ -53,7 +54,7 @@ namespace PERFORMANS
             OleDbConnection con = new OleDbConnection(conn.baglan);
             try
             {
-                OleDbDataAdapter da = new OleDbDataAdapter("select * from TBLOGRENCILER where OGRENCISINIFI=" + cmbsınıfsec.SelectedValue, con);
+                OleDbDataAdapter da = new OleDbDataAdapter("select * from TBLOGRENCILER where OGRENCISINIFI=" + sinif, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
@@ -160,7 +161,7 @@ namespace PERFORMANS
                 con.Open();
                 OleDbCommand komutpuansirala = new OleDbCommand("select OGRENCIADISOYADI, SUM(TOPLAMPUAN) AS 'TOPLAMPUAN'  FROM TBLNOTLAR   INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRENCIID=TBLNOTLAR.OGRENCININID WHERE HAFTA=@P1 AND SINIF=@P2 GROUP BY OGRENCIADISOYADI ORDER BY  SUM(TOPLAMPUAN) DESC ", con);
                 komutpuansirala.Parameters.AddWithValue("@P1", hafta);
-                komutpuansirala.Parameters.AddWithValue("@P2", cmbsınıfsec.SelectedValue);
+                komutpuansirala.Parameters.AddWithValue("@P2", sinif);
 
                 OleDbDataAdapter da2 = new OleDbDataAdapter();
                 da2.SelectCommand = komutpuansirala;
@@ -173,15 +174,18 @@ namespace PERFORMANS
             
         }
         public string tc;
-        string gun;
+        public string gun;
         public int bransid;
         public int ogretmenid;
+
+        public int derssaati;
+        public int sinif;
 
         void dersgetir()
         {
             int hafta=haftaal(DateTime.Now);
             OleDbConnection con = new OleDbConnection(conn.baglan);
-            gun = DateTime.Now.DayOfWeek.ToString();
+            
             if (label18.Text == "ogretmen")
             {
                 con.Open();
@@ -223,12 +227,20 @@ namespace PERFORMANS
         }
         private void frmanaform_Load(object sender, EventArgs e)
         {
-            
-           
-            int hafta=haftaal(DateTime.Now);
+
+            if (gunlukhaftalik == 1)
+            {
+                rdygunluk.Checked = true;
+            }
+            else if (gunlukhaftalik == 0)
+            {
+                rdyhaftalik.Checked = true;
+            }
+                int hafta = haftaal(DateTime.Now);
             label18.Text = rol.ToString();
             OleDbConnection con = new OleDbConnection(conn.baglan);
-            gun = DateTime.Now.DayOfWeek.ToString();
+            ogrencigetir();
+
             if (label18.Text == "ogretmen")
             {
                 con.Open();
@@ -259,10 +271,10 @@ namespace PERFORMANS
                     ogretmenid = int.Parse(rd[0].ToString());
                 }
                 con.Close();
-                gun = DateTime.Now.DayOfWeek.ToString();
+                
                 dersgetir();
                 con.Open();
-                OleDbCommand olcutoku = new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC,OLCUTDORT,OLCUTBES FROM TBLOGRETMENLER WHERE BRANS=" + bransid, con);
+                OleDbCommand olcutoku = new OleDbCommand("select OLCUTBIR, OLCUTIKI, OLCUTUC,OLCUTDORT,OLCUTBES FROM TBLOGRETMENLER WHERE OGRETMENID=" + ogretmenid, con);
                 OleDbDataReader rd2 = olcutoku.ExecuteReader();
                 while (rd2.Read())
                 {
@@ -294,6 +306,7 @@ namespace PERFORMANS
                 con.Close();
             }
 
+            
         }
         void ogrencipuan()
         {
@@ -303,7 +316,7 @@ namespace PERFORMANS
             {
                 con.Open();
                 OleDbCommand komuttoplampuan = new OleDbCommand("select sum(TOPLAMPUAN) FROM TBLNOTLAR WHERE  SINIF =@S1 AND  OGRENCINUMARASI=@P1 AND HAFTA=@P2 ", con);
-                komuttoplampuan.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
+                komuttoplampuan.Parameters.AddWithValue("@S1", sinif);
                 komuttoplampuan.Parameters.AddWithValue("@P1", int.Parse(lblogrencinumara.Text));
                 komuttoplampuan.Parameters.AddWithValue("@P2", hafta);
 
@@ -330,24 +343,29 @@ namespace PERFORMANS
             }
             con.Open();
             OleDbCommand siraoku = new OleDbCommand("select count(*) from TBLOGRENCILER WHERE OGRENCISINIFI=@P1", con);
-            siraoku.Parameters.AddWithValue("@P1", cmbsınıfsec.SelectedValue);
+            siraoku.Parameters.AddWithValue("@P1", sinif);
             OleDbDataReader rd = siraoku.ExecuteReader();
             while (rd.Read())
             {
                 
-                if (sira>=-1 &&sira < int.Parse(rd[0].ToString()))
+                if (sira>=-1 && sira < int.Parse(rd[0].ToString()))
                 {
                     sira = sira + 1;
                     cmbsınıfsec.Enabled = false;
                     cmbderssaati.Enabled = false;
+                    rdygunluk.Enabled = false;
+                    rdyhaftalik.Enabled = false;
                     button5.Enabled = false;
                     if (sira == int.Parse(rd[0].ToString()))
                     {
-                       
+                       chkhesapla.Checked=true;
+                        puansırala();
                         olcdurum = true;
-                        MessageBox.Show("Bütün sınıfı puanladığınız için teşekkür ederiz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Bütün sınıfı puanladığınız için teşekkür ederiz. Puanlama yapmak için Ders Programına Git butonuna tıklayabilirsiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                        cmbsınıfsec.Enabled = true;
                         cmbderssaati.Enabled = true;
+                        rdygunluk.Enabled = true;
+                        rdyhaftalik.Enabled = true;
                         button5.Enabled = true;
                         
                         sira = -1;
@@ -364,26 +382,49 @@ namespace PERFORMANS
                 }
             }
             con.Close();
-            con.Open();
-            OleDbCommand olcdurumguncelle = new OleDbCommand("update TBLDERSPROGRAMI SET OLCDURUM=@K1 WHERE TARIH=@P1 AND DERSSAATI=@P2 AND SINIF=@P3", con);
-            olcdurumguncelle.Parameters.AddWithValue("@K1", true);
-            olcdurumguncelle.Parameters.AddWithValue("@P1", gun);
-            olcdurumguncelle.Parameters.AddWithValue("@P2", cmbderssaati.SelectedValue);
-            olcdurumguncelle.Parameters.AddWithValue("@P3", cmbsınıfsec.SelectedValue);
-
-            if (olcdurum == true)
+            if (rdygunluk.Checked == true)
             {
-                olcdurumguncelle.ExecuteNonQuery();
-                puansırala();
-                dersgetir();
+                con.Open();
+                OleDbCommand olcdurumguncelle = new OleDbCommand("update TBLDERSPROGRAMI SET OLCDURUM=@K1 WHERE TARIH=@P1 AND DERSSAATI=@P2 AND SINIF=@P3", con);
+                olcdurumguncelle.Parameters.AddWithValue("@K1", true);
+                olcdurumguncelle.Parameters.AddWithValue("@P1", gun);
+                olcdurumguncelle.Parameters.AddWithValue("@P2", derssaati);
+                olcdurumguncelle.Parameters.AddWithValue("@P3", sinif);
+
+                if (olcdurum == true)
+                {
+                    olcdurumguncelle.ExecuteNonQuery();
+                    puansırala();
+                    dersgetir();
+                }
+
+                con.Close();
             }
 
-            con.Close();
+            else if(rdyhaftalik.Checked == true)
+            {
+                con.Open();
+                OleDbCommand olcdurumguncelle2= new OleDbCommand("update TBLDERSPROGRAMI SET OLCDURUM=@K1 WHERE SINIF=@P3  AND   DERS =@P4  ", con);
+                olcdurumguncelle2.Parameters.AddWithValue("@K1", true);
+                olcdurumguncelle2.Parameters.AddWithValue("@P3", sinif);
+                olcdurumguncelle2.Parameters.AddWithValue("@P4", ogretmendersadi);
+                
 
-           
-           
+                if (olcdurum == true)
+                {
+                    olcdurumguncelle2.ExecuteNonQuery();
+                    puansırala();
+                    dersgetir();
+                }
 
-            ogrencilistele();
+                con.Close();
+            }
+
+
+
+
+
+                ogrencilistele();
 
 
             chkdolubir.Visible = true;
@@ -417,75 +458,156 @@ namespace PERFORMANS
            
             
         }
-        private void button5_Click(object sender, EventArgs e)
+
+        int ogretmenderssayi;
+        int ogretmendersadi;
+
+        void ogrencigetir()
         {
-            int hafta=haftaal(DateTime.Now);
+            int hafta = haftaal(DateTime.Now);
             OleDbConnection con = new OleDbConnection(conn.baglan);
-            if(cmbderssaati.SelectedItem != null)
+
+            if (derssaati != null)
             {
-                con.Open();
-                OleDbCommand dersvaryok = new OleDbCommand("select TARIH, DERSSAATI, DERS,OLCDURUM FROM TBLDERSPROGRAMI WHERE TARIH=@P1 AND DERSSAATI=@P2 AND SINIF=@P3 AND OLCDURUM=@P4 ", con);
-                dersvaryok.Parameters.AddWithValue("@P1", gun);
-                dersvaryok.Parameters.AddWithValue("@P2", cmbderssaati.SelectedValue);
-                dersvaryok.Parameters.AddWithValue("@P3", cmbsınıfsec.SelectedValue);
-                dersvaryok.Parameters.AddWithValue("@P4", false);
-                
-                OleDbDataReader dersvaryokrd = dersvaryok.ExecuteReader();
-                if (sira < 0)
+
+                if (rdygunluk.Checked != null && rdyhaftalik.Checked != null)
                 {
-                    if (lbldersadi.Text != "" && dersvaryokrd.Read() == true)
+                    chkhesapla.Checked = false;
+                    con.Open();
+                    OleDbCommand dersvaryok = new OleDbCommand("select TARIH, DERSSAATI, DERS,OLCDURUM FROM TBLDERSPROGRAMI WHERE TARIH=@P1 AND DERSSAATI=@P2 AND SINIF=@P3 AND OLCDURUM=@P4 ", con);
+                    dersvaryok.Parameters.AddWithValue("@P1", gun);
+                    dersvaryok.Parameters.AddWithValue("@P2", derssaati);
+                    dersvaryok.Parameters.AddWithValue("@P3", sinif);
+                    dersvaryok.Parameters.AddWithValue("@P4", false);
+
+                    OleDbDataReader dersvaryokrd = dersvaryok.ExecuteReader();
+                    if (sira < 0)
                     {
-                        con.Close();
-                        degistir();
+                        if (dersvaryokrd.Read() == true)
+                        {
+                            con.Close();
+                            degistir();
 
 
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lütfen size tanımlanmış dersi ve sınıfı seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
                     }
-                    else
+                    con.Open();
+                    OleDbCommand komutdersoku = new OleDbCommand("select DERS from TBLDERSPROGRAMI WHERE SINIF=@P1 AND DERSSAATI=@P2 AND TARIH=@P3", con);
+                    komutdersoku.Parameters.AddWithValue("@P1", sinif);
+                    komutdersoku.Parameters.AddWithValue("@P2", derssaati);
+                    komutdersoku.Parameters.AddWithValue("@P3", gun);
+                    OleDbDataReader komutdersokurd = komutdersoku.ExecuteReader();
+                    while (komutdersokurd.Read())
                     {
-                        MessageBox.Show("Lütfen size tanımlanmış dersi ve sınıfı seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        ogretmendersadi = int.Parse(komutdersokurd[0].ToString());
                     }
+                    con.Close();
+                    con.Open();
+                    OleDbCommand komutderssayioku = new OleDbCommand("SELECT    count(*)  FROM     TBLDERSPROGRAMI WHERE   DERS = @P3    AND OGRETMEN = @P1    AND SINIF = @P2 AND OLCDURUM=@P4", con);
+
+                    komutderssayioku.Parameters.AddWithValue("@P3", ogretmendersadi);
+                    komutderssayioku.Parameters.AddWithValue("@P1", ogretmenid);
+                    komutderssayioku.Parameters.AddWithValue("@P2", sinif);
+                    komutderssayioku.Parameters.AddWithValue("@P4", false);
+                    OleDbDataReader rd2 = komutderssayioku.ExecuteReader();
+                    while (rd2.Read())
+                    {
+                        ogretmenderssayi = int.Parse(rd2[0].ToString());
+                    }
+                    con.Close();
+
                 }
                 else
                 {
-                    MessageBox.Show("Size tanımlanmış ders yoktur");
+                    MessageBox.Show("Bilgi", "Lütfen değerlendirme şeklini seçiniz.(GÜNLÜK PUANLA, HAFTALIK PUAN). Günlük puanlayı seçerseniz sadece seçtiniğiz ders saati puanlanacak. Haftalık puanlayı seçerseniz seçtiğiniz sınıfın bulunduğunuz haftadaki seçtiğiniz bütün derslerini puanlayacak.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
+
+            else
+            {
+                MessageBox.Show("Size tanımlanmış ders yoktur");
+            }
+
+
+
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmdersprogrami frmdersprogrami = new frmdersprogrami();
+            frmdersprogrami.rol = "ogretmen";
+            frmdersprogrami.ogretmentc= tc;
+            frmdersprogrami.ogretmenid = ogretmenid;
+            this.Close();
+            frmdersprogrami.Show();
+
 
 
 
 
         }
-
+        
         private void button4_Click(object sender, EventArgs e)
         {
             int hafta = haftaal(DateTime.Now);
             OleDbConnection con = new OleDbConnection(conn.baglan);
+           
             con.Open();
 
 
 
-            if (lblogrenciadsoyad.Text != "" && lbldersadi.Text != "")
+            if (lblogrenciadsoyad.Text != "" )
             {
-                OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
-                komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
-                komutpuankaydet.Parameters.AddWithValue("@D1",cmbderssaati.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
-                komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
-                komutpuankaydet.Parameters.AddWithValue("@P4", 0);
-                komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
-                komutpuankaydet.ExecuteNonQuery();
+                if (rdygunluk.Checked == true)
+                {
+                    OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                    komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                    komutpuankaydet.Parameters.AddWithValue("@D1", derssaati);
+                    komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                    komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                    komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                    komutpuankaydet.Parameters.AddWithValue("@P4", 0);
+                    komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                    komutpuankaydet.ExecuteNonQuery();
 
+                }
+                else if (rdyhaftalik.Checked == true)
+                {
+
+                    for(int i=1; i<=ogretmenderssayi; i++)
+                    {
+                        OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                        komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                        komutpuankaydet.Parameters.AddWithValue("@D1", i);
+                        komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                        komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                        komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                        komutpuankaydet.Parameters.AddWithValue("@P4", 0);
+                        komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                        komutpuankaydet.ExecuteNonQuery();
+                    }
+                }
             }
-            else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
+            else
+            {
+                MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi");
+            }
 
 
-            con.Close();
-            if (lblogrenciadsoyad.Text != "")
-            { degistir(); }
+
+                con.Close();
+                if (lblogrenciadsoyad.Text != "")
+                { degistir(); }
+            
+                
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -494,19 +616,38 @@ namespace PERFORMANS
             OleDbConnection con = new OleDbConnection(conn.baglan);
             con.Open();
 
-            if (lblogrenciadsoyad.Text != "" && lblogrencinumara.Text != "")
+            if (lblogrenciadsoyad.Text != "")
             {
-
-                OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN, HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
-                komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
-                komutpuankaydet.Parameters.AddWithValue("@D1", cmbderssaati.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
-                komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
-                komutpuankaydet.Parameters.AddWithValue("@P4", 2);
-                komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
-                komutpuankaydet.ExecuteNonQuery();
+                if (rdygunluk.Checked == true)
+                {
+                    OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN, HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                    komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                    komutpuankaydet.Parameters.AddWithValue("@D1", derssaati);
+                    komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                    komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                    komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                    komutpuankaydet.Parameters.AddWithValue("@P4", 2);
+                    komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                    komutpuankaydet.ExecuteNonQuery();
+                }
+                else  if (rdyhaftalik.Checked == true)
+                {
+                    for (int i = 1; i <= ogretmenderssayi; i++)
+                    {
+                        OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                        komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                        komutpuankaydet.Parameters.AddWithValue("@D1", i);
+                        komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                        komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                        komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                        komutpuankaydet.Parameters.AddWithValue("@P4", 2);
+                        komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                        komutpuankaydet.ExecuteNonQuery();
+                    }
+                }
+              
 
             }
             else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
@@ -522,19 +663,39 @@ namespace PERFORMANS
             OleDbConnection con = new OleDbConnection(conn.baglan);
             con.Open();
 
-            if (lbldersadi.Text != "" && lbldersadi.Text != "")
+            if (lbldersadi.Text != "" )
             {
+                if (rdygunluk.Checked == true)
+                {
+                    OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                    komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                    komutpuankaydet.Parameters.AddWithValue("@D1", derssaati);
+                    komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                    komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                    komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                    komutpuankaydet.Parameters.AddWithValue("@P4", 1);
+                    komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                    komutpuankaydet.ExecuteNonQuery();
+                }
 
-                OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
-                komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
-                komutpuankaydet.Parameters.AddWithValue("@D1", cmbderssaati.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
-                komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
-                komutpuankaydet.Parameters.AddWithValue("@P4", 1);
-                komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
-                komutpuankaydet.ExecuteNonQuery();
+                else if (rdyhaftalik.Checked == true)
+                {
+                                       for (int i = 1; i <= ogretmenderssayi; i++)
+                    {
+                        OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                        komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                        komutpuankaydet.Parameters.AddWithValue("@D1", i);
+                        komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                        komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                        komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                        komutpuankaydet.Parameters.AddWithValue("@P4", 1);
+                        komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                        komutpuankaydet.ExecuteNonQuery();
+                    }
+                }
+                
 
             }
             else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
@@ -549,19 +710,39 @@ namespace PERFORMANS
             OleDbConnection con = new OleDbConnection(conn.baglan);
             con.Open();
 
-            if (lblogrenciadsoyad.Text != "" && lbldersadi.Text != "")
+            if (lblogrenciadsoyad.Text != "" )
             {
+                if (rdygunluk.Checked == true)
+                {
+                    OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                    komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                    komutpuankaydet.Parameters.AddWithValue("@D1", derssaati);
+                    komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                    komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                    komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                    komutpuankaydet.Parameters.AddWithValue("@P4", 3);
+                    komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                    komutpuankaydet.ExecuteNonQuery();
+                }
 
-                OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
-                komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
-                komutpuankaydet.Parameters.AddWithValue("@D1", cmbderssaati.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
-                komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
-                komutpuankaydet.Parameters.AddWithValue("@P4", 3);
-                komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
-                komutpuankaydet.ExecuteNonQuery();
+                else if(rdyhaftalik.Checked == true)
+                {
+                    for (int i = 1; i <= ogretmenderssayi; i++)
+                    {
+                        OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                        komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                        komutpuankaydet.Parameters.AddWithValue("@D1", i);
+                        komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                        komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                        komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                        komutpuankaydet.Parameters.AddWithValue("@P4", 3);
+                        komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                        komutpuankaydet.ExecuteNonQuery();
+                    }
+                }
+
 
             }
             else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
@@ -576,19 +757,38 @@ namespace PERFORMANS
             OleDbConnection con = new OleDbConnection(conn.baglan);
             con.Open();
 
-            if (lblogrenciadsoyad.Text != "" && lbldersadi.Text != "")
+            if (lblogrenciadsoyad.Text != "" )
             {
+                if (rdygunluk.Checked == true)
+                {
+                    OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                    komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                    komutpuankaydet.Parameters.AddWithValue("@D1", derssaati);
+                    komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                    komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                    komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                    komutpuankaydet.Parameters.AddWithValue("@P4", 4);
+                    komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                    komutpuankaydet.ExecuteNonQuery();
+                }
+                else if (rdyhaftalik.Checked == true)
+                {
+                    for (int i = 1; i <= ogretmenderssayi; i++)
+                    {
+                        OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
+                        komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                        komutpuankaydet.Parameters.AddWithValue("@D1", i);
+                        komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                        komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
+                        komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                        komutpuankaydet.Parameters.AddWithValue("@P4", 4);
+                        komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
+                        komutpuankaydet.ExecuteNonQuery();
+                    }
+                }
 
-                OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5)", con);
-                komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
-                komutpuankaydet.Parameters.AddWithValue("@D1", cmbderssaati.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P2", lblogrencinumara.Text);
-                komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
-                komutpuankaydet.Parameters.AddWithValue("@P4", 4);
-                komutpuankaydet.Parameters.AddWithValue("@P5", hafta);
-                komutpuankaydet.ExecuteNonQuery();
 
             }
             else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
@@ -604,23 +804,48 @@ namespace PERFORMANS
             con.Open();
 
 
-            if (lblogrenciadsoyad.Text != "" && lbldersadi.Text != "")
+            if (lblogrenciadsoyad.Text != "")
             {
-                OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, 1_OLCUT, 2_OLCUT, 3_OLCUT, 4_OLCUT, 5_OLCUT, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@P9,@P10)", con);
-                komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
-                komutpuankaydet.Parameters.AddWithValue("@D1", cmbderssaati.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P2", int.Parse(lblogrencinumara.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
-                komutpuankaydet.Parameters.AddWithValue("@P4", 1);
-                komutpuankaydet.Parameters.AddWithValue("@P5", 1);
-                komutpuankaydet.Parameters.AddWithValue("@P6", 1);
-                komutpuankaydet.Parameters.AddWithValue("@P7", 1);
-                komutpuankaydet.Parameters.AddWithValue("@P8", 1);
-                komutpuankaydet.Parameters.AddWithValue("@P9", 5);
-                komutpuankaydet.Parameters.AddWithValue("@P10", hafta);
-                komutpuankaydet.ExecuteNonQuery();
+
+                if (rdygunluk.Checked == true)
+                {
+                    OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, 1_OLCUT, 2_OLCUT, 3_OLCUT, 4_OLCUT, 5_OLCUT, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@P9,@P10)", con);
+                    komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                    komutpuankaydet.Parameters.AddWithValue("@D1", derssaati);
+                    komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                    komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P2", int.Parse(lblogrencinumara.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                    komutpuankaydet.Parameters.AddWithValue("@P4", 1);
+                    komutpuankaydet.Parameters.AddWithValue("@P5", 1);
+                    komutpuankaydet.Parameters.AddWithValue("@P6", 1);
+                    komutpuankaydet.Parameters.AddWithValue("@P7", 1);
+                    komutpuankaydet.Parameters.AddWithValue("@P8", 1);
+                    komutpuankaydet.Parameters.AddWithValue("@P9", 5);
+                    komutpuankaydet.Parameters.AddWithValue("@P10", hafta);
+                    komutpuankaydet.ExecuteNonQuery();
+                }
+                else if (rdyhaftalik.Checked == true)
+                {
+                                       for (int i = 1; i <= ogretmenderssayi; i++)
+                    {
+                        OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, 1_OLCUT, 2_OLCUT, 3_OLCUT, 4_OLCUT, 5_OLCUT, TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@P9,@P10)", con);
+                        komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                        komutpuankaydet.Parameters.AddWithValue("@D1", i);
+                        komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                        komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P2", int.Parse(lblogrencinumara.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                        komutpuankaydet.Parameters.AddWithValue("@P4", 1);
+                        komutpuankaydet.Parameters.AddWithValue("@P5", 1);
+                        komutpuankaydet.Parameters.AddWithValue("@P6", 1);
+                        komutpuankaydet.Parameters.AddWithValue("@P7", 1);
+                        komutpuankaydet.Parameters.AddWithValue("@P8", 1);
+                        komutpuankaydet.Parameters.AddWithValue("@P9", 5);
+                        komutpuankaydet.Parameters.AddWithValue("@P10", hafta);
+                        komutpuankaydet.ExecuteNonQuery();
+                    }
+                }
 
             }
             else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
@@ -629,10 +854,7 @@ namespace PERFORMANS
             { degistir(); }
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Bu program öğrencilerimizin ders içi performanslarını artırmak ve onları motive etmek amacıyla 2025 yılında CENGİZ YILMAZ tarafından yapılmıştır. Bilgi için muallimiturki@gmail.com adresine mesaj atabilirsiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        
 
         int toplampuani = 5;
         int bir = 1;
@@ -646,46 +868,95 @@ namespace PERFORMANS
             OleDbConnection con = new OleDbConnection(conn.baglan);
             con.Open();
 
-            if (lblogrenciadsoyad.Text != "" && lbldersadi.Text != "")
+            if (lblogrenciadsoyad.Text != "")
             {
-                OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, 1_OLCUT, 2_OLCUT, 3_OLCUT, 4_OLCUT, 5_OLCUT,UYARITIPI,UYARIVARYOK,UYARI,TOPLAMPUAN, HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@UT,@P9,@P10,@P11,@P12)", con);
-                komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
-                komutpuankaydet.Parameters.AddWithValue("@D1", cmbderssaati.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@S1", cmbsınıfsec.SelectedValue);
-                komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P2", int.Parse(lblogrencinumara.Text));
-                komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
-                komutpuankaydet.Parameters.AddWithValue("@P4", bir);
-                komutpuankaydet.Parameters.AddWithValue("@P5", iki);
-                komutpuankaydet.Parameters.AddWithValue("@P6", uc);
-                komutpuankaydet.Parameters.AddWithValue("@P7", dort);
-                komutpuankaydet.Parameters.AddWithValue("@P8", bes);
-                if (rchnotdus.Text != "")
+                if (rdygunluk.Checked == true)
                 {
-                    if (chkolumluuyari.Visible == true)
+                    OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, 1_OLCUT, 2_OLCUT, 3_OLCUT, 4_OLCUT, 5_OLCUT,UYARITIPI,UYARIVARYOK,UYARI,TOPLAMPUAN, HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@UT,@P9,@P10,@P11,@P12)", con);
+                    komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                    komutpuankaydet.Parameters.AddWithValue("@D1", derssaati);
+                    komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                    komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P2", int.Parse(lblogrencinumara.Text));
+                    komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                    komutpuankaydet.Parameters.AddWithValue("@P4", bir);
+                    komutpuankaydet.Parameters.AddWithValue("@P5", iki);
+                    komutpuankaydet.Parameters.AddWithValue("@P6", uc);
+                    komutpuankaydet.Parameters.AddWithValue("@P7", dort);
+                    komutpuankaydet.Parameters.AddWithValue("@P8", bes);
+                    if (rchnotdus.Text != "")
                     {
-                        komutpuankaydet.Parameters.AddWithValue("@UT", true);
-                        komutpuankaydet.Parameters.AddWithValue("@P9", true);
-                        komutpuankaydet.Parameters.AddWithValue("@P10", rchnotdus.Text);
+                        if (chkolumluuyari.Visible == true)
+                        {
+                            komutpuankaydet.Parameters.AddWithValue("@UT", true);
+                            komutpuankaydet.Parameters.AddWithValue("@P9", true);
+                            komutpuankaydet.Parameters.AddWithValue("@P10", rchnotdus.Text);
+                        }
+                        else if (chkolumsuzuyari.Visible == true)
+                        {
+                            komutpuankaydet.Parameters.AddWithValue("@UT", false);
+                            komutpuankaydet.Parameters.AddWithValue("@P9", true);
+                            komutpuankaydet.Parameters.AddWithValue("@P10", rchnotdus.Text);
+                        }
+
                     }
-                    else if (chkolumsuzuyari.Visible == true)
+                    else if (rchnotdus.Text == "")
                     {
                         komutpuankaydet.Parameters.AddWithValue("@UT", false);
-                        komutpuankaydet.Parameters.AddWithValue("@P9", true);
-                        komutpuankaydet.Parameters.AddWithValue("@P10", rchnotdus.Text);
+                        komutpuankaydet.Parameters.AddWithValue("@P9", false);
+                        komutpuankaydet.Parameters.AddWithValue("@P10", "");
                     }
-                  
+                    komutpuankaydet.Parameters.AddWithValue("@P11", toplampuani);
+                    komutpuankaydet.Parameters.AddWithValue("@P12", hafta);
+                    komutpuankaydet.ExecuteNonQuery();
                 }
-                else if (rchnotdus.Text == "")
-                {
-                    komutpuankaydet.Parameters.AddWithValue("@UT", false);
-                    komutpuankaydet.Parameters.AddWithValue("@P9", false);
-                    komutpuankaydet.Parameters.AddWithValue("@P10", "");
-                }
-                komutpuankaydet.Parameters.AddWithValue("@P11", toplampuani);
-                komutpuankaydet.Parameters.AddWithValue("@P12", hafta);
-                komutpuankaydet.ExecuteNonQuery();
 
+                else if (rdyhaftalik.Checked == true)
+                {
+                    for (int i = 1; i <= ogretmenderssayi; i++)
+                    {
+                        OleDbCommand komutpuankaydet = new OleDbCommand("insert into TBLNOTLAR (BRANS,DERSSAATI,SINIF,OGRENCININID,OGRENCINUMARASI,TARIH, 1_OLCUT, 2_OLCUT, 3_OLCUT, 4_OLCUT, 5_OLCUT,UYARITIPI,UYARIVARYOK,UYARI,TOPLAMPUAN,HAFTA) VALUES(@P1,@D1,@S1,@O1,@P2,@P3,@P4,@P5,@P6,@P7,@P8,@UT,@P9,@P10,@P11,@P12)", con);
+                        komutpuankaydet.Parameters.AddWithValue("@P1", bransid);
+                        komutpuankaydet.Parameters.AddWithValue("@D1", i);
+                        komutpuankaydet.Parameters.AddWithValue("@S1", sinif);
+                        komutpuankaydet.Parameters.AddWithValue("@O1", int.Parse(lblogrenciid.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P2", int.Parse(lblogrencinumara.Text));
+                        komutpuankaydet.Parameters.AddWithValue("@P3", dateTimePicker1.Value.ToString());
+                        komutpuankaydet.Parameters.AddWithValue("@P4", bir);
+                        komutpuankaydet.Parameters.AddWithValue("@P5", iki);
+                        komutpuankaydet.Parameters.AddWithValue("@P6", uc);
+                        komutpuankaydet.Parameters.AddWithValue("@P7", dort);
+                        komutpuankaydet.Parameters.AddWithValue("@P8", bes);
+                        if (rchnotdus.Text != "")
+                        {
+                            if (chkolumluuyari.Visible == true)
+                            {
+                                komutpuankaydet.Parameters.AddWithValue("@UT", true);
+                                komutpuankaydet.Parameters.AddWithValue("@P9", true);
+                                komutpuankaydet.Parameters.AddWithValue("@P10", rchnotdus.Text);
+                            }
+                            else if (chkolumsuzuyari.Visible == true)
+                            {
+                                komutpuankaydet.Parameters.AddWithValue("@UT", false);
+                                komutpuankaydet.Parameters.AddWithValue("@P9", true);
+                                komutpuankaydet.Parameters.AddWithValue("@P10", rchnotdus.Text);
+                            }
+
+                        }
+                        else if (rchnotdus.Text == "")
+                        {
+                            komutpuankaydet.Parameters.AddWithValue("@UT", false);
+                            komutpuankaydet.Parameters.AddWithValue("@P9", false);
+                            komutpuankaydet.Parameters.AddWithValue("@P10", "");
+                        }
+                        komutpuankaydet.Parameters.AddWithValue("@P11", toplampuani);
+                        komutpuankaydet.Parameters.AddWithValue("@P12", hafta);
+                        komutpuankaydet.ExecuteNonQuery();
+                    }
+
+
+                }
+               
             }
             else { MessageBox.Show("Lütfen SINIF SEÇ kısmından sınıfı seçiniz ve  ÖĞRENCİ GETİR butonuna basınız.", "Bilgi"); }
             con.Close();
@@ -696,7 +967,26 @@ namespace PERFORMANS
 
         private void pictureBox6_Click_1(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            if (sira == -1)
+            {
+                if (label18.Text == "ogretmen")
+                {
+                    this.WindowState = FormWindowState.Minimized;
+                    
+                }
+                else if (label18.Text == "yonetici")
+                {
+                    this.WindowState = FormWindowState.Minimized;
+
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Değerlendirmeniz devam ediyor. Lütfen değerlendirme bitmeden sayfadan çıkmayınız.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
@@ -705,13 +995,12 @@ namespace PERFORMANS
             {
                 if (label18.Text == "ogretmen")
                 {
-                    this.Close();
-                    frmogrtgiris frmogrtgiris = new frmogrtgiris();
-                    frmogrtgiris.Show();
+                    Application.Exit();
+                    
                 }
                 else if (label18.Text =="yonetici")
                 {
-                    this.Close();
+                    Application.Exit();
                     
 
                 }
@@ -719,7 +1008,7 @@ namespace PERFORMANS
             }
             else
             {
-                MessageBox.Show(cmbsınıfsec.Text+" Sınıfını değerlendirmeniz devam ediyor. Lütfen değerlendirme bitmeden programdan çıkış yapmayınız.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Değerlendirmeniz devam ediyor. Lütfen değerlendirme bitmeden programdan çıkış yapmayınız.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
@@ -727,18 +1016,28 @@ namespace PERFORMANS
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             frmayarlar frmayarlar = new frmayarlar();
-            frmayarlar.bransayar = bransid;
+            frmayarlar.ogretmenayar = ogretmenid;
             frmayarlar.Show();
 
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
+            if (rol == "ogretmen")
+            {
+                frmistatistikler frmistatistikler = new frmistatistikler();
+                frmistatistikler.rol = "ogretmen";
+                frmistatistikler.ogretmennum = ogretmenid;
+                frmistatistikler.bransnum = bransid;
+                frmistatistikler.Show();
+            }
+            else if(rol == "yonetici")
+            {
+                frmistatistikler frmistatistikler = new frmistatistikler();
+                frmistatistikler.rol = "yonetici";
+                frmistatistikler.Show();
+            }
 
-            frmistatistikler frmistatistikler = new frmistatistikler();
-            frmistatistikler.rol = "ogretmen";
-            frmistatistikler.bransnum = bransid;
-            frmistatistikler.Show();
 
         }
 
@@ -953,7 +1252,7 @@ namespace PERFORMANS
             cmbderssaati.SelectedItem=null;
             lbldersadi.Text = "DERS:";
 
-            gun = DateTime.Now.DayOfWeek.ToString();
+            
             OleDbConnection con = new OleDbConnection(conn.baglan);
             if (label18.Text == "ogretmen")
             {
@@ -962,7 +1261,7 @@ namespace PERFORMANS
                 OleDbCommand derssaatigetir = new OleDbCommand("select  DERSSAATI, SAATAD FROM TBLDERSPROGRAMI INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID=TBLDERSPROGRAMI.DERSSAATI WHERE TARIH=@P1 AND OGRETMEN=@P2 AND SINIF=@P3 AND OLCDURUM=@P4", con);
                 derssaatigetir.Parameters.AddWithValue("@P1", gun);
                 derssaatigetir.Parameters.AddWithValue("@P2", ogretmenid);
-                derssaatigetir.Parameters.AddWithValue("@P3", cmbsınıfsec.SelectedValue);
+                derssaatigetir.Parameters.AddWithValue("@P3", sinif);
                 derssaatigetir.Parameters.AddWithValue("@P4", false);
 
                 OleDbDataAdapter da5 = new OleDbDataAdapter();
@@ -984,7 +1283,7 @@ namespace PERFORMANS
                 con.Open();
                 OleDbCommand derssaatigetir2 = new OleDbCommand("select  DERSSAATI, SAATAD FROM TBLDERSPROGRAMI INNER JOIN TBLSAATLER ON TBLSAATLER.SAATID=TBLDERSPROGRAMI.DERSSAATI WHERE TARIH=@k1  AND SINIF=@k3 AND OLCDURUM=@k4", con);
                 derssaatigetir2.Parameters.AddWithValue("@k1", gun);
-                derssaatigetir2.Parameters.AddWithValue("@k3", cmbsınıfsec.SelectedValue);
+                derssaatigetir2.Parameters.AddWithValue("@k3", sinif);
                 derssaatigetir2.Parameters.AddWithValue("@k4", false);
 
                 OleDbDataAdapter da5 = new OleDbDataAdapter();
@@ -1010,13 +1309,13 @@ namespace PERFORMANS
             if (cmbderssaati.SelectedValue != null)
             {
                 
-                gun = DateTime.Now.DayOfWeek.ToString();
+                
                 OleDbConnection con = new OleDbConnection(conn.baglan);
                 con.Open();
                 OleDbCommand dersoku = new OleDbCommand("select BRANSADI FROM TBLDERSPROGRAMI INNER JOIN TBLBRANSLAR ON TBLBRANSLAR.BRANSID=TBLDERSPROGRAMI.DERS WHERE TARIH=@P1 AND SINIF=@P2 AND DERSSAATI=@P3 AND OLCDURUM=@P4 ", con);
                 dersoku.Parameters.AddWithValue("@P1", gun);
-                dersoku.Parameters.AddWithValue("@P2", cmbsınıfsec.SelectedValue);
-                dersoku.Parameters.AddWithValue("@P3", cmbderssaati.SelectedValue);
+                dersoku.Parameters.AddWithValue("@P2", sinif);
+                dersoku.Parameters.AddWithValue("@P3", derssaati);
                 dersoku.Parameters.AddWithValue("@P4", false);
 
                 OleDbDataReader dersokurd = dersoku.ExecuteReader();
@@ -1036,6 +1335,9 @@ namespace PERFORMANS
            
         }
 
-       
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

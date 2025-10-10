@@ -63,8 +63,10 @@ namespace PERFORMANS
             dataGridView2.DataSource = ds.Tables[0];
             dataGridView2.Columns[0].HeaderText = "ÖĞRETMEN İD";
             dataGridView2.Columns[1].HeaderText = "T.C. KİMLİK NUMARA";
-            dataGridView2.Columns[2].HeaderText = "SİFRE";
-            dataGridView2.Columns[3].HeaderText = "BRANS ADI";
+            dataGridView2.Columns[2].HeaderText = "ADI SOYADI";
+            dataGridView2.Columns[3].HeaderText = "SIFRE";
+            dataGridView2.Columns[4].HeaderText = "BRANS ADI";
+
         }
         int dersprogramisiraoku;
         void dersprogramilist()
@@ -75,7 +77,21 @@ namespace PERFORMANS
             DataTable dtprogramgor = new DataTable();
             dersprogramilistele.Fill(dtprogramgor);
             dataGridView1.DataSource = dtprogramgor;
-            
+            DataGridViewCellStyle style = new DataGridViewCellStyle();
+            for(int i= 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                if (Convert.ToBoolean(dataGridView1.Rows[i].Cells[6].Value) == true)
+                {
+                    style.BackColor = Color.LightGreen;
+                    dataGridView1.Rows[i].DefaultCellStyle = style;
+                }
+                else
+                {
+                    style.BackColor = Color.Red;
+                    dataGridView1.Rows[i].DefaultCellStyle = style;
+                }
+            }
+
             con.Open();
             OleDbCommand siraoku = new OleDbCommand("select  count(*) from TBLDERSPROGRAMI", con);
             OleDbDataReader siraokurd=siraoku.ExecuteReader();
