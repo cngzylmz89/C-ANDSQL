@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace BarkodluSatis
 {
-    public partial class Form1 : Form
+    public partial class frmbarkdolusatisana : Form
     {
-        public Form1()
+        public frmbarkdolusatisana()
         {
             InitializeComponent();
         }
+
+        
     }
 }

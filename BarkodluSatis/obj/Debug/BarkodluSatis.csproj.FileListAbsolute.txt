@@ -1,0 +1,11 @@
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\BarkodluSatis.exe.config
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\BarkodluSatis.exe
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\BarkodluSatis.pdb
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.frmbarkdolusatisana.resources
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.Properties.Resources.resources
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.exe
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.pdb
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.exe.config
