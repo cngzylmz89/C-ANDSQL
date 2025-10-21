@@ -9,3 +9,10 @@ C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.cspro
 C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.exe
 C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.pdb
 C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\BarkodluSatis.exe.config
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\Barkod.mdf
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\Barkod_log.ldf
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\Database1.mdf
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\Database1_log.ldf
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\EntityFramework.dll
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\bin\Debug\EntityFramework.xml
+C:\Users\PC\Desktop\CENGİZ\C#ANDSQL\BarkodluSatis\obj\Debug\Barkodlu.53085A68.Up2Date

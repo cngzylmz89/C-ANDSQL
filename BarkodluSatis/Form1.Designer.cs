@@ -38,11 +38,6 @@
             this.txtbarkod = new System.Windows.Forms.TextBox();
             this.txtmiktar = new System.Windows.Forms.TextBox();
             this.gridsatislistesi = new System.Windows.Forms.DataGridView();
-            this.URUNADI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FIYAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MIKTAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOPLAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIL = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnnakitkart = new System.Windows.Forms.Button();
             this.btnkart = new System.Windows.Forms.Button();
@@ -116,6 +111,15 @@
             this.button48 = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Barkod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UrunAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SatisFiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MIKTAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOPLAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kdvtutari = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alisfiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIL = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -233,6 +237,7 @@
             this.txtbarkod.Name = "txtbarkod";
             this.txtbarkod.Size = new System.Drawing.Size(234, 20);
             this.txtbarkod.TabIndex = 1;
+            this.txtbarkod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbarkod_KeyDown);
             // 
             // txtmiktar
             // 
@@ -259,10 +264,14 @@
             this.gridsatislistesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridsatislistesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridsatislistesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.URUNADI,
-            this.FIYAT,
+            this.Barkod,
+            this.UrunAd,
+            this.Birim,
+            this.SatisFiyat,
             this.MIKTAR,
             this.TOPLAM,
+            this.Kdvtutari,
+            this.alisfiyat,
             this.SIL});
             this.gridsatislistesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridsatislistesi.EnableHeadersVisualStyles = false;
@@ -272,32 +281,6 @@
             this.gridsatislistesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridsatislistesi.Size = new System.Drawing.Size(585, 491);
             this.gridsatislistesi.TabIndex = 1;
-            // 
-            // URUNADI
-            // 
-            this.URUNADI.HeaderText = "ÜRÜN ADI";
-            this.URUNADI.Name = "URUNADI";
-            // 
-            // FIYAT
-            // 
-            this.FIYAT.HeaderText = "FİYAT";
-            this.FIYAT.Name = "FIYAT";
-            // 
-            // MIKTAR
-            // 
-            this.MIKTAR.HeaderText = "MİKTAR";
-            this.MIKTAR.Name = "MIKTAR";
-            // 
-            // TOPLAM
-            // 
-            this.TOPLAM.HeaderText = "TOPLAM";
-            this.TOPLAM.Name = "TOPLAM";
-            // 
-            // SIL
-            // 
-            this.SIL.HeaderText = "SİL";
-            this.SIL.Image = global::BarkodluSatis.Properties.Resources.remove;
-            this.SIL.Name = "SIL";
             // 
             // tableLayoutPanel2
             // 
@@ -1629,6 +1612,54 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 117;
             // 
+            // Barkod
+            // 
+            this.Barkod.HeaderText = "Barkod";
+            this.Barkod.Name = "Barkod";
+            // 
+            // UrunAd
+            // 
+            this.UrunAd.HeaderText = "Ürün Adı";
+            this.UrunAd.Name = "UrunAd";
+            // 
+            // Birim
+            // 
+            this.Birim.HeaderText = "Birim";
+            this.Birim.Name = "Birim";
+            // 
+            // SatisFiyat
+            // 
+            this.SatisFiyat.HeaderText = "Fiyat";
+            this.SatisFiyat.Name = "SatisFiyat";
+            // 
+            // MIKTAR
+            // 
+            this.MIKTAR.HeaderText = "Miktar";
+            this.MIKTAR.Name = "MIKTAR";
+            // 
+            // TOPLAM
+            // 
+            this.TOPLAM.HeaderText = "Toplam";
+            this.TOPLAM.Name = "TOPLAM";
+            // 
+            // Kdvtutari
+            // 
+            this.Kdvtutari.HeaderText = "Kdv Tutarı";
+            this.Kdvtutari.Name = "Kdvtutari";
+            this.Kdvtutari.Visible = false;
+            // 
+            // alisfiyat
+            // 
+            this.alisfiyat.HeaderText = "Aliş Fiyat";
+            this.alisfiyat.Name = "alisfiyat";
+            this.alisfiyat.Visible = false;
+            // 
+            // SIL
+            // 
+            this.SIL.HeaderText = "SİL";
+            this.SIL.Image = global::BarkodluSatis.Properties.Resources.remove;
+            this.SIL.Name = "SIL";
+            // 
             // frmbarkdolusatisana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1639,6 +1670,7 @@
             this.Name = "frmbarkdolusatisana";
             this.Text = "BARKODLU SATIŞ PROGRAMI";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmbarkdolusatisana_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1745,11 +1777,6 @@
         private System.Windows.Forms.Button button49;
         private System.Windows.Forms.Button button48;
         private System.Windows.Forms.Button button47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn URUNADI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FIYAT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MIKTAR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TOPLAM;
-        private System.Windows.Forms.DataGridViewImageColumn SIL;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
@@ -1759,6 +1786,15 @@
         private System.Windows.Forms.TextBox txtparaustu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barkod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UrunAd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SatisFiyat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MIKTAR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TOPLAM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kdvtutari;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alisfiyat;
+        private System.Windows.Forms.DataGridViewImageColumn SIL;
     }
 }
 
